@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecabezas Obliquo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Rompecabezas Obliquo</h1>
+            <p>Arrastra las piezas para completar la imagen</p>
+        </header>
+
+        <div class="controls">
+            <button id="shuffleBtn" class="btn btn-primary">
+                <span class="icon">🔀</span>
+                Mezclar
+            </button>
+            <button id="resetBtn" class="btn btn-secondary">
+                <span class="icon">🔄</span>
+                Reiniciar
+            </button>
+        </div>
+
+        <div class="game-area">
+            <!-- Imagen de referencia -->
+            <div class="reference-section">
+                <h3>Imagen Original</h3>
+                <div class="reference-image">
+                    <img src="obliquo.jpg" alt="Imagen original" id="originalImage">
+                </div>
+            </div>
+
+            <!-- Área del rompecabezas -->
+            <div class="puzzle-section">
+                <h3>Rompecabezas</h3>
+                <div id="puzzleGrid" class="puzzle-grid">
+                    <!-- Las piezas se generarán dinámicamente -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="progress-section">
+            <div class="progress-text">
+                Progreso: <span id="progressText">0 / 12</span> piezas correctas
+            </div>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de celebración -->
+    <div id="celebrationModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="celebration-icon">🎉</div>
+            <h2>¡Felicitaciones!</h2>
+            <p>Has completado el rompecabezas exitosamente</p>
+            <p class="redirect-text">Redirigiendo a la página de bienvenida...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

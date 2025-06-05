@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obliquo - Equipo Creativo</title>
+    <link rel="stylesheet" href="obliquo-styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-container">
+                <div class="logo-o">o</div>
+                <div class="logo-b">b</div>
+                <div class="logo-l">l</div>
+                <div class="logo-i">i</div>
+                <div class="logo-q">q</div>
+                <div class="logo-u">u</div>
+                <div class="logo-o2">o</div>
+            </div>
+        </div>
+        <nav class="navigation">
+            <a href="#" class="nav-link">HOME</a>
+            <a href="#" class="nav-link">NOSOTROS</a>
+            <a href="#" class="nav-link">TRABAJOS</a>
+            <a href="#" class="nav-link">CONTACTO</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal con scroll horizontal -->
+    <main class="horizontal-container">
+        <!-- Sección 1: Equipo (página original) -->
+        <section class="section team-main-section">
+            <div class="team-content">
+                <div class="team-grid">
+                    <!-- Paula Card -->
+                    <div class="team-card card-pink">
+                        <div class="card-icon">
+                            <div class="icon-q green">q</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="member-name">PAULA<br>FERRÓN ACOSTA</h3>
+                            <p class="member-role">Animadora Gráfica</p>
+                            <div class="card-arrow">→</div>
+                        </div>
+                    </div>
+
+                    <!-- Agostina Card -->
+                    <div class="team-card card-purple">
+                        <div class="card-icon">
+                            <div class="icon-q red">q</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="member-name">AGOSTINA<br>CHAMORRO</h3>
+                            <p class="member-role">Diseñadora Gráfica</p>
+                            <div class="card-arrow">→</div>
+                        </div>
+                    </div>
+
+                    <!-- Sofia Card -->
+                    <div class="team-card card-blue">
+                        <div class="card-icon">
+                            <div class="icon-q pink">q</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="member-name">SOFIA<br>TARAVINI</h3>
+                            <p class="member-role">Modeladora 3D</p>
+                            <div class="card-arrow">→</div>
+                        </div>
+                    </div>
+
+                    <!-- Catalina Card -->
+                    <div class="team-card card-green">
+                        <div class="card-icon">
+                            <div class="icon-q cyan">q</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="member-name">CATALINA<br>GARAC Y GOJAK</h3>
+                            <p class="member-role">Editora VFX</p>
+                            <div class="card-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Title -->
+                <div class="bottom-title">
+                    <h1 class="main-title">SOMOS OBLIQUO</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Servicios en grid 2x3 -->
+        <section class="section services-grid-section">
+            <div class="services-container">
+                <!-- Fila superior -->
+                <div class="services-row">
+                    <!-- Diseño Gráfico -->
+                    <div class="service-item" data-service="Diseño Gráfico">
+                        <img src="diseñoGrafico.jpg"Diseño Gráfico" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-name">Diseño Gráfico</h3>
+                        </div>
+                    </div>
+
+                    <!-- Motion Graphics -->
+                    <div class="service-item" data-service="Motion Graphics">
+                        <img src="motionGrapfics.jpg" alt="Motion Graphics" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-name">Motion Graphics</h3>
+                        </div>
+                    </div>
+
+                    <!-- Diseño Publicitario -->
+                    <div class="service-item" data-service="Diseño Publicitario">
+                        <img src="diseñoPublicitario.jpg" alt="Diseño Publicitario"
+                            class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-name">Diseño Publicitario</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila inferior -->
+                <div class="services-row">
+                    <!-- Merchandising -->
+                    <div class="service-item" data-service="Merchandising">
+                        <img src="marchandising.jpg" alt="Merchandising" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-name">Merchandising</h3>
+                        </div>
+                    </div>
+
+                    <!-- Diseño Web -->
+                    <div class="service-item" data-service="Diseño Web">
+                        <img src="diseñoWeb.jpeg" alt="Diseño Web" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-name">Diseño Web</h3>
+                        </div>
+                    </div>
+
+                    <!-- Modelado 3D -->
+                    <div class="service-item" data-service="Modelado 3D">
+                        <img src="modelado3d.jpg" alt="Modelado 3D" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-name">Modelado 3D</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Indicador de scroll -->
+    <div class="scroll-indicator">
+        <div class="scroll-dots">
+            <span class="dot active" data-section="0"></span>
+            <span class="dot" data-section="1"></span>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+        <div class="success-content">
+            <div class="success-icon">🎉</div>
+            <p>¡Rompecabezas completado exitosamente!</p>
+        </div>
+    </div>
+
+    <script src="obliquo-script.js"></script>
+</body>
+
+</html>
+
+

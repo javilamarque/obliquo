@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.logo-container > div {
+  display: inline-block;
+  margin-right: 2px;
+  transform: rotateX(-15deg) rotateY(15deg);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-o,
+.logo-b,
+.logo-l,
+.logo-i,
+.logo-u,
+.logo-o2 {
+  color: white;
+}
+
+.logo-q {
+  color: #a3e635;
+  font-weight: 900;
+}
+
+.navigation {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #a3e635;
+}
+
+/* Main Content */
+.main-content {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Team Section */
+.team-section {
+  margin-bottom: 80px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.team-card {
+  border-radius: 20px;
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Backgrounds */
+.card-pink {
+  background: linear-gradient(135deg, #ff6b9d, #c44569, #8e44ad);
+}
+
+.card-purple {
+  background: linear-gradient(135deg, #667eea, #764ba2, #8e44ad);
+}
+
+.card-blue {
+  background: linear-gradient(135deg, #4facfe, #00f2fe, #1e3c72);
+}
+
+.card-green {
+  background: linear-gradient(135deg, #a8edea, #fed6e3, #00d2ff);
+}
+
+/* Card Icons */
+.card-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.icon-q {
+  font-size: 8rem;
+  font-weight: 900;
+  transform: rotateX(-15deg) rotateY(15deg);
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  perspective: 1000px;
+  position: relative;
+}
+
+.icon-q::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.icon-q.green {
+  color: #a3e635;
+}
+
+.icon-q.red {
+  color: #ef4444;
+}
+
+.icon-q.pink {
+  color: #ec4899;
+}
+
+.icon-q.cyan {
+  color: #06b6d4;
+}
+
+/* Card Content */
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.member-role {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.card-arrow {
+  font-size: 1.5rem;
+  font-weight: bold;
+  align-self: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .card-arrow {
+  transform: translateX(10px);
+}
+
+/* Bottom Title */
+.bottom-title {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.main-title {
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 4px;
+  background: linear-gradient(45deg, #ffffff, #a3e635, #ffffff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(163, 230, 53, 0.3);
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Success Message */
+.success-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+  transform: translateX(400px);
+  transition: transform 0.5s ease;
+  z-index: 1000;
+}
+
+.success-message.show {
+  transform: translateX(0);
+}
+
+.success-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.success-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .navigation {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .team-card {
+    min-height: 350px;
+    padding: 30px 20px;
+  }
+
+  .icon-q {
+    font-size: 6rem;
+  }
+
+  .member-name {
+    font-size: 1.3rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    font-size: 1.5rem;
+  }
+
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .team-card {
+    min-height: 300px;
+    padding: 25px 15px;
+  }
+
+  .icon-q {
+    font-size: 5rem;
+  }
+
+  .member-name {
+    font-size: 1.2rem;
+  }
+
+  .member-role {
+    font-size: 1rem;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animaciones de entrada */
+.team-card {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.team-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.team-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.team-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.team-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-title {
+  opacity: 0;
+  animation: fadeInTitle 1s ease 0.6s forwards;
+}
+
+@keyframes fadeInTitle {
+  to {
+    opacity: 1;
+  }
+}
