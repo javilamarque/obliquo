@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -77,11 +77,15 @@ body {
 
 .game-area {
   display: flex;
-  gap: 40px;
+  gap: 50px;
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .reference-section,
@@ -118,6 +122,8 @@ body {
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 634px;
+  height: 334px;
 }
 
 .puzzle-piece {
@@ -233,6 +239,18 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .game-area {
+    gap: 30px;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 15px;
@@ -251,6 +269,8 @@ body {
   .puzzle-grid {
     grid-template-columns: repeat(4, 120px);
     grid-template-rows: repeat(3, 80px);
+    width: 504px;
+    height: 274px;
   }
 
   .reference-image img {
@@ -274,6 +294,8 @@ body {
     grid-template-rows: repeat(3, 53px);
     gap: 1px;
     padding: 10px;
+    width: 342px;
+    height: 181px;
   }
 
   .reference-image img {

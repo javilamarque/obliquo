@@ -74,7 +74,7 @@ class PuzzleGame {
     // Mezclar las posiciones usando Fisher-Yates
     for (let i = positions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
-        ;[positions[i], positions[j]] = [positions[j], positions[i]]
+      ;[positions[i], positions[j]] = [positions[j], positions[i]]
     }
 
     // Asignar las posiciones mezcladas a las piezas
