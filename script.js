@@ -1,9 +1,10 @@
 class PuzzleGame {
   constructor() {
-    this.ROWS = 3
-    this.COLS = 4
+    this.ROWS = 2
+    this.COLS = 3
+    this.TOTAL_PIECES = 6 // 6 piezas en total
     this.PIECE_WIDTH = 150
-    this.PIECE_HEIGHT = 100
+    this.PIECE_HEIGHT = 150
     this.pieces = []
     this.draggedElement = null
     this.draggedPieceId = null
@@ -21,7 +22,7 @@ class PuzzleGame {
 
   createPuzzlePieces() {
     this.pieces = []
-    for (let i = 0; i < this.ROWS * this.COLS; i++) {
+    for (let i = 0; i < this.TOTAL_PIECES; i++) {
       const row = Math.floor(i / this.COLS)
       const col = i % this.COLS
       this.pieces.push({
@@ -47,14 +48,14 @@ class PuzzleGame {
       if (piece) {
         const pieceImage = document.createElement("div")
         pieceImage.className = "piece-image"
+        pieceImage.dataset.pieceId = piece.id
+        pieceImage.draggable = true
 
         // Calcular la posición de fondo correcta
         const bgX = -piece.x
         const bgY = -piece.y
 
         pieceImage.style.backgroundPosition = `${bgX}px ${bgY}px`
-        pieceImage.draggable = true
-        pieceImage.dataset.pieceId = piece.id
 
         slot.appendChild(pieceImage)
       }
@@ -69,12 +70,12 @@ class PuzzleGame {
 
   shufflePieces() {
     // Crear una copia del array de posiciones
-    const positions = Array.from({ length: this.ROWS * this.COLS }, (_, i) => i)
+    const positions = Array.from({ length: this.TOTAL_PIECES }, (_, i) => i)
 
     // Mezclar las posiciones usando Fisher-Yates
     for (let i = positions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
-      ;[positions[i], positions[j]] = [positions[j], positions[i]]
+        ;[positions[i], positions[j]] = [positions[j], positions[i]]
     }
 
     // Asignar las posiciones mezcladas a las piezas
@@ -147,12 +148,9 @@ class PuzzleGame {
 
     if (draggedPiece && targetPiece) {
       // Intercambiar posiciones
-      const tempPosition = draggedPiece.currentPosition
+      const temp = draggedPiece.currentPosition
       draggedPiece.currentPosition = targetPiece.currentPosition
-      targetPiece.currentPosition = tempPosition
-    } else if (draggedPiece) {
-      // Mover a posición vacía
-      draggedPiece.currentPosition = targetPosition
+      targetPiece.currentPosition = temp
     }
 
     this.renderPuzzle()
@@ -166,9 +164,9 @@ class PuzzleGame {
     const progressText = document.getElementById("progressText")
     const progressFill = document.getElementById("progressFill")
 
-    progressText.textContent = `${correctPieces} / ${this.ROWS * this.COLS}`
+    progressText.textContent = `${correctPieces} / ${this.TOTAL_PIECES}`
 
-    const percentage = (correctPieces / (this.ROWS * this.COLS)) * 100
+    const percentage = (correctPieces / this.TOTAL_PIECES) * 100
     progressFill.style.width = `${percentage}%`
   }
 
@@ -184,10 +182,29 @@ class PuzzleGame {
     const modal = document.getElementById("celebrationModal")
     modal.classList.remove("hidden")
 
-    // Redirigir después de 3 segundos
+    // Redirigir después de 3 segundos con detección de entorno
     setTimeout(() => {
-      window.location.href = "bienvenida.html"
+      this.redirectToWelcome()
     }, 3000)
+  }
+
+  // Función para manejar la redirección según el entorno
+  redirectToWelcome() {
+    // Detectar si estamos en Vercel o servidor local
+    const hostname = window.location.hostname
+    const isVercel = hostname.includes("vercel.app") || hostname.includes("vercel.com")
+    const isLocalhost = hostname === "localhost" || hostname === "127.0.0.1"
+
+    if (isVercel) {
+      // En Vercel, usar rutas sin extensión
+      window.location.href = "/bienvenida"
+    } else if (isLocalhost) {
+      // En localhost, usar archivos HTML
+      window.location.href = "bienvenida.html"
+    } else {
+      // Fallback: intentar ambas opciones
+      window.location.href = "bienvenida.html"
+    }
   }
 
   resetGame() {
