@@ -238,6 +238,54 @@ body {
   font-style: italic;
 }
 
+/* Video Modal Styles */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 99vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 2.5vh 2.5vw;
+  /* 1.5% de padding en todos los lados para crear el 3% total */
+}
+
+.video-modal.hidden {
+  display: none;
+}
+
+.completion-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  /* Opcional: esquinas redondeadas */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  /* Opcional: sombra sutil */
+}
+
+/* Asegurar que el video no muestre controles */
+.completion-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.completion-video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.completion-video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+.completion-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .container {

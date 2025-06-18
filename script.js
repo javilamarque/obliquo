@@ -182,10 +182,39 @@ class PuzzleGame {
     const modal = document.getElementById("celebrationModal")
     modal.classList.remove("hidden")
 
-    // Redirigir después de 3 segundos con detección de entorno
+    // Mostrar el video después de 2 segundos
     setTimeout(() => {
+      modal.classList.add("hidden")
+      this.showCompletionVideo()
+    }, 2000)
+  }
+
+  showCompletionVideo() {
+    const videoModal = document.getElementById("videoModal")
+    const video = document.getElementById("completionVideo")
+
+    videoModal.classList.remove("hidden")
+
+    // Reproducir el video
+    video.play().catch((error) => {
+      console.log("Error al reproducir el video:", error)
+      // Si hay error, ir directamente a la página de bienvenida
       this.redirectToWelcome()
-    }, 3000)
+    })
+
+    // Evento cuando el video termina
+    video.addEventListener("ended", () => {
+      videoModal.classList.add("hidden")
+      this.redirectToWelcome()
+    })
+
+    // Backup: redirigir después de 61 segundos por si acaso
+    setTimeout(() => {
+      if (!videoModal.classList.contains("hidden")) {
+        videoModal.classList.add("hidden")
+        this.redirectToWelcome()
+      }
+    }, 61000) // 1 minuto y 1 segundo
   }
 
   // Función para manejar la redirección según el entorno
