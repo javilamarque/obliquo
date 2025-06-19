@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obliquo - Equipo Creativo</title>
     <link rel="stylesheet" href="obliquo-styles.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -97,7 +99,8 @@
                 <div class="services-row">
                     <!-- Diseño Gráfico -->
                     <div class="service-item" data-service="Diseño Gráfico">
-                        <img src="./public/portadas-categorias/portada_dg.jpg" alt="Diseño Gráfico" class="service-image">
+                        <img src="./public/portadas-categorias/portada_dg.jpg" alt="Diseño Gráfico"
+                            class="service-image">
                         <div class="service-overlay">
                             <h3 class="service-name">Diseño Gráfico</h3>
                         </div>
@@ -105,7 +108,8 @@
 
                     <!-- Motion Graphics -->
                     <div class="service-item" data-service="Motion Graphics">
-                        <img src="./public/portadas-categorias/portada-motion.jpg" alt="Motion Graphics" class="service-image">
+                        <img src="./public/portadas-categorias/portada-motion.jpg" alt="Motion Graphics"
+                            class="service-image">
                         <div class="service-overlay">
                             <h3 class="service-name">Motion Graphics</h3>
                         </div>
@@ -113,7 +117,8 @@
 
                     <!-- Diseño Publicitario -->
                     <div class="service-item" data-service="Diseño Publicitario">
-                        <img src="./public/portadas-categorias/portada-campanias.jpg" alt="Diseño Publicitario" class="service-image">
+                        <img src="./public/portadas-categorias/portada-campanias.jpg" alt="Diseño Publicitario"
+                            class="service-image">
                         <div class="service-overlay">
                             <h3 class="service-name">Diseño Publicitario</h3>
                         </div>
@@ -124,7 +129,8 @@
                 <div class="services-row">
                     <!-- Merchandising -->
                     <div class="service-item" data-service="Merchandising">
-                        <img src="./public/portadas-categorias/portada-merch.jpg" alt="Merchandising" class="service-image">
+                        <img src="./public/portadas-categorias/portada-merch.jpg" alt="Merchandising"
+                            class="service-image">
                         <div class="service-overlay">
                             <h3 class="service-name">Merchandising</h3>
                         </div>
@@ -150,6 +156,42 @@
         </section>
     </main>
 
+    <!-- Modal del Carrusel -->
+    <div id="carouselModal" class="carousel-modal hidden">
+        <div class="carousel-container">
+            <div class="carousel-header">
+                <h2 id="carouselTitle" class="carousel-title">Categoría</h2>
+                <button id="closeCarousel" class="close-btn">&times;</button>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Las imágenes se cargarán dinámicamente -->
+                </div>
+
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <!-- Los indicadores se generarán dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalle (para cuando se haga click en una imagen del carrusel) -->
+    <div id="detailModal" class="detail-modal hidden">
+        <div class="detail-container">
+            <div class="detail-header">
+                <button id="closeDetail" class="close-btn">&times;</button>
+            </div>
+            <div class="detail-content">
+                <img id="detailImage" src="/placeholder.svg" alt="" class="detail-image">
+                <div class="detail-info">
+                    <h3 id="detailTitle" class="detail-title">Título del Proyecto</h3>
+                    <p id="detailDescription" class="detail-description">Descripción del proyecto...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Indicador de scroll -->
     <div class="scroll-indicator">
         <div class="scroll-dots">
@@ -168,4 +210,5 @@
 
     <script src="obliquo-script.js"></script>
 </body>
+
 </html>
