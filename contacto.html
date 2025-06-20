@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Obliquo</title>
+    <title>Contacto - Obliquo</title>    
     <link rel="stylesheet" href="contacto-styles.css">
+    <!-- ✅ GOOGLE FONTS - NUNITO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -45,21 +50,48 @@
             </div>
         </div>
 
+
+
+
         <!-- Right Side - Contact Form -->
         <div class="form-section">
-            <form class="contact-form" id="contactForm">
+            <!-- ✅ FORMULARIO FORMSPREE - REEMPLAZA CON TU ENDPOINT -->
+            <form class="contact-form" action="https://formspree.io/f/mkgbvgyz" method="POST" id="contactForm">
+        
+                <!-- ✅ CAMPOS OCULTOS PARA FORMSPREE -->
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde Obliquo">
+                <input type="hidden" name="_next" value="gracias.html">
+                <input type="hidden" name="_captcha" value="false">
+        
                 <div class="form-row">
-                    <input type="text" class="form-input" placeholder="Nombre" required>
-                    <input type="text" class="form-input" placeholder="Apellido" required>
+                    <input type="text" name="nombre" class="form-input" placeholder="Nombre" required>
+                    <input type="text" name="apellido" class="form-input" placeholder="Apellido" required>
                 </div>
-                
-                <input type="email" class="form-input full-width" placeholder="tu-email@ejemplo.com" required>
-                
-                <textarea class="form-textarea" placeholder="¡Hola! Quiero realizar unas placas para..." required></textarea>
-                
-                <button type="submit" class="submit-btn">CONTACTANOS</button>
+        
+                <input type="email" name="email" class="form-input full-width" placeholder="tu-email@ejemplo.com" required>
+        
+                <textarea name="mensaje" class="form-textarea" placeholder="¡Hola! Quiero realizar unas placas para..."
+                    required></textarea>
+        
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">CONTACTANOS</span>
+                    <span class="btn-loading hidden">ENVIANDO...</span>
+                </button>
             </form>
+        
+            <!-- ✅ MENSAJE DE ESTADO -->
+            <div id="formStatus" class="form-status hidden"></div>
+        
+            <!-- ✅ INFO DEL SERVICIO -->
+            <div class="form-info">
+                <p>🔒 Tus datos están protegidos y seguros</p>
+                <p>⚡ Respuesta en menos de 24 horas</p>
+            </div>
         </div>
+
+
+
+
 
         <!-- Instagram Icon -->
         <div class="social-icon">
