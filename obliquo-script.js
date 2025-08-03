@@ -92,17 +92,18 @@ const categoryData = {
             {
                 src: "./public/diseñoWeb/1.jpg",
                 title: "Sitio Web Responsivo",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam."
+                description: "Página web informativa de la organización “Glutenzero”, dedicada a difundir información sobre la celiaquía. Dentro de la web se pueden encontrar recetas, cuidado y mitos que se difunden sobre la celiaquía. https://glutenzero.obliquo.site/"
+                
             },
             {
                 src: "./public/diseñoWeb/2.jpg",
                 title: "E-commerce Moderno",
-                description: "Quisque lorem tortor, gravida sit amet, ornare a, interdum at, justo."
+                description: "E-commerce de la tienda de mascotas “Pet Pats”, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. https://petpats.obliquo.site/"
             },
             {
                 src: "./public/diseñoWeb/3.jpg",
                 title: "Landing Page Optimizada",
-                description: "Maecenas aliquet mollis lectus. Vivamus consectetuer risus et tortor."
+                description: "Landing page sobre la aplicación “Gea”, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. https://obliquo.site/"
             }
         ]
     },

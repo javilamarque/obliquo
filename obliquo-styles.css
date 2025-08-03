@@ -1,5 +1,6 @@
 /* ✅ NUNITO PARA OBLIQUO-STYLES.CSS */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -316,7 +317,6 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-height: 250px;
     background: #2a2a2a;
-    /* Color de fondo por si la imagen no carga */
 }
 
 .service-image {
@@ -327,10 +327,8 @@ body {
     transition: transform 0.4s ease;
     display: block;
     border-radius: 0;
-    /* Quitar border-radius de la imagen para que use el del contenedor */
 }
 
-/* Asegurar que las imágenes cubran completamente el contenedor */
 .service-item img {
     position: absolute;
     top: 0;
@@ -437,6 +435,292 @@ body {
     gap: 10px;
 }
 
+/* ✅ MODAL DEL CARRUSEL - IMÁGENES AJUSTADAS */
+.carousel-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    backdrop-filter: blur(10px);
+}
+
+.carousel-modal.hidden {
+    display: none;
+}
+
+.carousel-container {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 800px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #a3e635;
+    padding-bottom: 15px;
+}
+
+.carousel-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #a3e635;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* ✅ CONTENEDOR DE IMAGEN AJUSTADO */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #2a2a2a;
+    /* Fondo para espacios vacíos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+/* ✅ IMAGEN DEL CARRUSEL - AJUSTADA SIN CORTES */
+.carousel-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    /* ✅ OBJECT-FIT: CONTAIN - La imagen se ve completa */
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: transparent;
+}
+
+.carousel-image:hover {
+    transform: scale(1.02);
+}
+
+/* ✅ ALTERNATIVA: Si quieres que llene todo el espacio */
+.carousel-image-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image-cover:hover {
+    transform: scale(1.05);
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #a3e635;
+    transform: scale(1.3);
+}
+
+.carousel-indicator:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* ✅ BOTONES DE NAVEGACIÓN DEL CARRUSEL */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(163, 230, 53, 0.9);
+    color: #333;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-nav:hover {
+    background: #a3e635;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(163, 230, 53, 0.4);
+}
+
+.carousel-nav.prev {
+    left: 15px;
+}
+
+.carousel-nav.next {
+    right: 15px;
+}
+
+/* Modal de Detalle */
+.detail-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4000;
+    backdrop-filter: blur(15px);
+}
+
+.detail-modal.hidden {
+    display: none;
+}
+
+.detail-container {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 95vw;
+    max-height: 95vh;
+    width: 1000px;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+    border: 2px solid #a3e635;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.detail-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ✅ IMAGEN DE DETALLE AJUSTADA */
+.detail-image {
+    flex: 1;
+    max-width: 60%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.detail-info {
+    flex: 1;
+    max-width: 40%;
+}
+
+.detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #a3e635;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.detail-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+/* ✅ LOADING STATE PARA IMÁGENES */
+.image-loading {
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 10px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
 /* Responsive Design actualizado */
 @media (max-width: 1200px) {
     .team-grid {
@@ -523,226 +807,8 @@ body {
     .logo-container {
         font-size: 1.5rem;
     }
-}
 
-/* Mejoras para adaptación de imágenes */
-@media (max-width: 768px) {
-    .service-item {
-        min-height: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .service-item {
-        min-height: 150px;
-    }
-
-    .service-name {
-        font-size: 1.5rem;
-    }
-}
-
-/* Modal del Carrusel */
-.carousel-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3000;
-    backdrop-filter: blur(10px);
-}
-
-.carousel-modal.hidden {
-    display: none;
-}
-
-.carousel-container {
-    background: #1a1a1a;
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 90vw;
-    max-height: 90vh;
-    width: 800px;
-    position: relative;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #a3e635;
-    padding-bottom: 15px;
-}
-
-.carousel-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #a3e635;
-    margin: 0;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.close-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: scale(1.1);
-}
-
-.carousel-wrapper {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.carousel-track {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.carousel-item.active {
-    opacity: 1;
-}
-
-.carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.carousel-image:hover {
-    transform: scale(1.05);
-}
-
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.carousel-indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.carousel-indicator.active {
-    background: #a3e635;
-    transform: scale(1.3);
-}
-
-.carousel-indicator:hover {
-    background: rgba(255, 255, 255, 0.7);
-}
-
-/* Modal de Detalle */
-.detail-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.95);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 4000;
-    backdrop-filter: blur(15px);
-}
-
-.detail-modal.hidden {
-    display: none;
-}
-
-.detail-container {
-    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-    border-radius: 25px;
-    padding: 40px;
-    max-width: 95vw;
-    max-height: 95vh;
-    width: 1000px;
-    position: relative;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
-    border: 2px solid #a3e635;
-}
-
-.detail-header {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-}
-
-.detail-content {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.detail-image {
-    flex: 1;
-    max-width: 60%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.detail-info {
-    flex: 1;
-    max-width: 40%;
-}
-
-.detail-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #a3e635;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.detail-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #e0e0e0;
-    margin: 0;
-}
-
-/* Responsive para modales */
-@media (max-width: 768px) {
+    /* ✅ RESPONSIVE PARA CARRUSEL */
     .carousel-container {
         width: 95vw;
         padding: 20px;
@@ -754,6 +820,20 @@ body {
 
     .carousel-wrapper {
         height: 300px;
+    }
+
+    .carousel-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .carousel-nav.prev {
+        left: 10px;
+    }
+
+    .carousel-nav.next {
+        right: 10px;
     }
 
     .detail-container {
@@ -768,6 +848,7 @@ body {
 
     .detail-image {
         max-width: 100%;
+        max-height: 50vh;
     }
 
     .detail-info {
@@ -784,6 +865,14 @@ body {
 }
 
 @media (max-width: 480px) {
+    .service-item {
+        min-height: 150px;
+    }
+
+    .service-name {
+        font-size: 1.5rem;
+    }
+
     .carousel-container {
         padding: 15px;
     }
@@ -848,4 +937,25 @@ body {
     to {
         opacity: 1;
     }
+}
+
+/* ✅ ANIMACIONES SUAVES PARA EL CARRUSEL */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.carousel-modal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.detail-modal {
+    animation: fadeIn 0.3s ease-out;
 }
