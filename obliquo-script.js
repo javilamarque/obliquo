@@ -9,29 +9,29 @@ const categoryData = {
     "Diseño Gráfico": {
         images: [
             {
-                src: "./public/diseñoGrafico/1.jpg",
+                src: "./public/diseñoGrafico/1-a.jpg",
                 title: "Identidad Visual Corporativa",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                description: "Trabajo de poster creativo publicitando un tour del cantante Shawn Mendes. Realizado en Adobe Illustrator."
             },
             {
-                src: "./public/diseñoGrafico/2.jpg",
+                src: "./public/diseñoGrafico/2-a.jpg",
                 title: "Diseño Editorial Moderno",
-                description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                description: "Trabajo de poster cinematográfico sobre la película “IT” de 2017, haciendo alusión a la frase de “Todos flotan… y cuando este aquí abajo, tú también flotaras” del personaje Pennywise Realizado en Adobe Photoshop"
             },
             {
-                src: "./public/diseñoGrafico/3.jpg",
+                src: "./public/diseñoGrafico/3-a.jpg",
                 title: "Packaging Innovador",
-                description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+                description: "Trabajo de portada para libro biográfico de Stephen King, donde lo vemos acompañado de algunos de sus personajes más populares. Realizado en Adobe Illustrator."
             },
             {
-                src: "./public/diseñoGrafico/4.jpg",
+                src: "./public/diseñoGrafico/4-a.jpg",
                 title: "Branding Estratégico",
-                description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+                description: "Trabajo de montaje sobre lo antiguo contrastando con la modernidad como diseño de estampa de remera. Realizado en Adobe Photoshop."
             },
             {
                 src: "./public/diseñoGrafico/5.jpg",
                 title: "Diseño de Logotipos",
-                description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+                description: "Trabajo de branding de una editorial de libros dedicada a publicar a nuevos escritores y sacar nuevas ediciones de clásicos del género del terror, misterio y crimen. Realizado en Adobe Illustrator."
             }
         ]
     },
@@ -60,7 +60,7 @@ const categoryData = {
             {
                 src: "./public/motion/5.jpg",
                 title: "Motion Graphics Corporativo",
-                description: "Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus."
+                description: " Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus."
             }
         ]
     },

@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/assets/styles.css">
+<script src="/v100/main.js"></script>
+<title>C++ Shell</title>
+</head>
+<body>
+<div id="header">
+<div id="logo">
+<h1><a href="http://cpp.sh/">C++ shell</a></h1>
+</div>
+<div id="motto">
+<h2><a href="http://cpp.sh/">cpp.sh</a></h2>
+online C++ compiler
+</div>
+</div>
+
+<div id="bar">
+<a href="/about.html">about cpp.sh</a>
+</div>
+
+<div id="wrap">
+<div id="compiler" class="comped"></div>
+</div>
+
+<div id="bottom">
+<a href="/about.html">C++ Shell 2.0</a> &copy; cpp.sh 2014-2025 | <a href="https://buymeacoffee.com/cppshell">buy me a coffe</a>
+<br>old version still available <a href="http://th.cpp.sh">here</a> (for a limited time).
+</div>
+
+<script>
+var prefixStatic = "/assets";
+cppsh.app(document.getElementById('compiler'),{"ajax":false},{"source":"#include <iostream>\r\n\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    float lado1, lado2, lado3;\r\n    int op;\r\n    \r\n    cout<<\"seleecione una figura: \";\r\n    cout<<\"1. cuadrado: \";\r\n    cout<<\"2. rectangulo: \";\r\n    cout<<\"3. triangulo:  \";\r\n    \r\n    cin>>op;\r\n    \r\n    switch(op){\r\n        case 1:\r\n        cout<<\"indique el lado del cuadrado: \";\r\n        cin>>lado1;\r\n        cout<<\"el resultado es: \"<< lado1 *4;\r\n        break;\r\n        \r\n        case 2:\r\n        cout<<\"indique el lado del rectangulo: \";\r\n        cin>>lado2;\r\n        cout<<\"el resultado es : \"<< 2*lado1 + 2*lado2;\r\n        break;\r\n        \r\n        case 3:\r\n        cout<<\"indique el lado del triangulo: \";\r\n        cin>>lado1;\r\n        cout<<\"indique el lado del triangulo: \";\r\n        cin>>lado2;\r\n        cout<<\"indique el lado del triangulo: \";\r\n        cin>>lado3;\r\n        cout<<\"el resultado es : \"<< lado1 + lado2 + lado3;\r\n        break;\r\n        \r\n        default:\r\n        cout<<\"opcion es incorrecta\";\r\n    }\r\n}\r\n    \r\n        \r\n        \r\n        \r\n        \r\n        \r\n        \r\n\r\n\r\n\r\n\r\n\r\n"});
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RLQFT1V1QW" crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RLQFT1V1QW');
+</script>
+
+</body>
+</html>
