@@ -4,138 +4,157 @@ const totalSections = 2
 let isScrolling = false
 let currentCarouselIndex = 0
 
-// Datos de las categorías con sus imágenes
+// ✅ TUS DATOS ORIGINALES + VIDEO SOLO EN MODELADO 3D
 const categoryData = {
     "Diseño Gráfico": {
+        hasVideo: false, // ✅ SOLO IMÁGENES
         images: [
             {
                 src: "./public/diseñoGrafico/1-a.jpg",
                 title: "Identidad Visual Corporativa",
-                description: "Trabajo de poster creativo publicitando un tour del cantante Shawn Mendes. Realizado en Adobe Illustrator."
+                description:
+                    "Trabajo de poster creativo publicitando un tour del cantante Shawn Mendes. Realizado en Adobe Illustrator.",
             },
             {
                 src: "./public/diseñoGrafico/2-a.jpg",
                 title: "Diseño Editorial Moderno",
-                description: "Trabajo de poster cinematográfico sobre la película “IT” de 2017, haciendo alusión a la frase de “Todos flotan… y cuando este aquí abajo, tú también flotaras” del personaje Pennywise Realizado en Adobe Photoshop"
+                description:
+                    "Trabajo de poster cinematográfico sobre la película IT de 2017, haciendo alusión a la frase de Todos flotan… y cuando este aquí abajo, tú también flotaras del personaje Pennywise Realizado en Adobe Photoshop",
             },
             {
                 src: "./public/diseñoGrafico/3-a.jpg",
                 title: "Packaging Innovador",
-                description: "Trabajo de portada para libro biográfico de Stephen King, donde lo vemos acompañado de algunos de sus personajes más populares. Realizado en Adobe Illustrator."
+                description:
+                    "Trabajo de portada para libro biográfico de Stephen King, donde lo vemos acompañado de algunos de sus personajes más populares. Realizado en Adobe Illustrator.",
             },
             {
                 src: "./public/diseñoGrafico/4-a.jpg",
                 title: "Branding Estratégico",
-                description: "Trabajo de montaje sobre lo antiguo contrastando con la modernidad como diseño de estampa de remera. Realizado en Adobe Photoshop."
+                description:
+                    "Trabajo de montaje sobre lo antiguo contrastando con la modernidad como diseño de estampa de remera. Realizado en Adobe Photoshop.",
             },
             {
                 src: "./public/diseñoGrafico/5.jpg",
                 title: "Diseño de Logotipos",
-                description: "Trabajo de branding de una editorial de libros dedicada a publicar a nuevos escritores y sacar nuevas ediciones de clásicos del género del terror, misterio y crimen. Realizado en Adobe Illustrator."
-            }
-        ]
+                description:
+                    "Trabajo de branding de una editorial de libros dedicada a publicar a nuevos escritores y sacar nuevas ediciones de clásicos del género del terror, misterio y crimen. Realizado en Adobe Illustrator.",
+            },
+        ],
     },
     "Motion Graphics": {
+        hasVideo: false, // ✅ SOLO IMÁGENES
         images: [
             {
                 src: "./public/motion/1.jpg",
                 title: "Animación 2D Creativa",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum."
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.",
             },
             {
                 src: "./public/motion/2.jpg",
                 title: "Efectos Visuales Dinámicos",
-                description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+                description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
             },
             {
                 src: "./public/motion/3.jpg",
                 title: "Transiciones Cinematográficas",
-                description: "Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est."
+                description: "Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.",
             },
             {
                 src: "./public/motion/4.jpg",
                 title: "Animación de Personajes",
-                description: "Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi."
+                description: "Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.",
             },
             {
                 src: "./public/motion/5.jpg",
                 title: "Motion Graphics Corporativo",
-                description: " Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus."
-            }
-        ]
+                description:
+                    " Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus.",
+            },
+        ],
     },
     "Diseño Publicitario": {
+        hasVideo: false, // ✅ SOLO IMÁGENES
         images: [
             {
                 src: "./public/carrousel-campanias/1.jpg",
                 title: "Campaña Publicitaria Integral",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt mauris eu risus."
-            }
-        ]
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt mauris eu risus.",
+            },
+        ],
     },
-    "Merchandising": {
+    Merchandising: {
+        hasVideo: false, // ✅ SOLO IMÁGENES
         images: [
             {
                 src: "./public/marchan/1.jpg",
                 title: "Productos Promocionales",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat accumsan nulla."
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat accumsan nulla.",
             },
             {
                 src: "./public/marchan/2.jpg",
                 title: "Merchandising Corporativo",
-                description: "Pellentesque dapibus hendrerit tortor. Praesent egestas tristique nibh."
-            }
-        ]
+                description: "Pellentesque dapibus hendrerit tortor. Praesent egestas tristique nibh.",
+            },
+        ],
     },
     "Diseño Web": {
+        hasVideo: false, // ✅ SOLO IMÁGENES
         images: [
             {
                 src: "./public/diseñoWeb/1.jpg",
                 title: "Sitio Web Responsivo",
-                description: "Página web informativa de la organización “Glutenzero”, dedicada a difundir información sobre la celiaquía. Dentro de la web se pueden encontrar recetas, cuidado y mitos que se difunden sobre la celiaquía. https://glutenzero.obliquo.site/"
-                
+                description:
+                    "Página web informativa de la organización Glutenzero, dedicada a difundir información sobre la celiaquía. Dentro de la web se pueden encontrar recetas, cuidado y mitos que se difunden sobre la celiaquía. https://glutenzero.obliquo.site/",
             },
             {
                 src: "./public/diseñoWeb/2.jpg",
                 title: "E-commerce Moderno",
-                description: "E-commerce de la tienda de mascotas “Pet Pats”, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. https://petpats.obliquo.site/"
+                description:
+                    "E-commerce de la tienda de mascotas Pet Pats, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. https://petpats.obliquo.site/",
             },
             {
                 src: "./public/diseñoWeb/3.jpg",
                 title: "Landing Page Optimizada",
-                description: "Landing page sobre la aplicación “Gea”, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. https://obliquo.site/"
-            }
-        ]
+                description:
+                    "Landing page sobre la aplicación Gea, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. https://obliquo.site/",
+            },
+        ],
     },
     "Modelado 3D": {
+        hasVideo: true, // ✅ ESTA CATEGORÍA TIENE VIDEOS
         images: [
             {
                 src: "./public/3d/1.jpg",
                 title: "Modelado Arquitectónico",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat risus quis eros."
+                video: "public/3d/video/OBLIQUO_reel.mp4", // ✅ VIDEO
+                description: "LModelo 3d inspirado en Chopper, el personaje de la serie de manga y franquicia “One Piece”, acompañado de elementos alusivos a la misma. Realizado en Zbrush y texturizado en Substance Painter. ArtStation:  https://www.artstation.com/artwork/6NJQZ6",
             },
             {
                 src: "./public/3d/2.jpg",
                 title: "Renderizado Fotorrealista",
-                description: "Vestibulum commodo felis quis tortor. Ut aliquam sollicitudin leo."
+                video: "public/3d/video/2.mp4", // ✅ VIDEO
+                description: "Modelo 3d construido a partir del estilo de armas cyberpunk. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/yDzaN9",
             },
             {
                 src: "./public/3d/3.jpg",
                 title: "Animación 3D Avanzada",
-                description: "Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero."
+                video: "public/3d/video/3.mp4", // ✅ VIDEO
+                description: "Modelo 3d de gatito inspirado en Halloween ubicado en un cementerio para acompañar la estética del personaje. Realizado en Zbrush y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/XJ0Jol",
             },
             {
                 src: "./public/3d/4.jpg",
                 title: "Visualización de Productos",
-                description: "Hendrerit a, volutpat vitae, justo. Nullam dictum felis eu pede mollis pretium."
+                video: "public/3d/video/4.mp4", // ✅ VIDEO
+                description: "Modelo 3d de reloj cucú con detalles y terminaciones de engranajes al estilo steampunk. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/39OKZg",
             },
             {
                 src: "./public/3d/5.jpg",
                 title: "Escenarios Virtuales",
-                description: "Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae."
-            }
-        ]
-    }
+                video: "public/3d/video/5.mp4", // ✅ VIDEO
+                description: "Modelo 3d de radio radar retro con elementos agregados de tecnología de localización y pantallas. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/RyvA5r",
+            },
+        ],
+    },
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -152,7 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function getRoutePath(page) {
     const hostname = window.location.hostname
     const isVercel = hostname.includes("vercel.app") || hostname.includes("vercel.com")
-
     if (isVercel) {
         return `/${page}`
     } else {
@@ -166,7 +184,6 @@ function showSuccessMessage() {
         setTimeout(() => {
             successMessage.classList.add("show")
         }, 500)
-
         setTimeout(() => {
             successMessage.classList.remove("show")
         }, 4000)
@@ -174,15 +191,19 @@ function showSuccessMessage() {
 }
 
 function setupHorizontalScroll() {
-    document.addEventListener("wheel", (e) => {
-        if (isScrolling) return
-        e.preventDefault()
-        if (e.deltaY > 0) {
-            nextSection()
-        } else {
-            prevSection()
-        }
-    }, { passive: false })
+    document.addEventListener(
+        "wheel",
+        (e) => {
+            if (isScrolling) return
+            e.preventDefault()
+            if (e.deltaY > 0) {
+                nextSection()
+            } else {
+                prevSection()
+            }
+        },
+        { passive: false },
+    )
 
     document.addEventListener("keydown", (e) => {
         if (isScrolling) return
@@ -200,7 +221,8 @@ function setupHorizontalScroll() {
         }
     })
 
-    let startX = 0, startY = 0
+    let startX = 0,
+        startY = 0
     document.addEventListener("touchstart", (e) => {
         startX = e.touches[0].clientX
         startY = e.touches[0].clientY
@@ -322,11 +344,25 @@ function setupServiceEvents() {
     })
 }
 
-// ✅ FUNCIÓN PRINCIPAL - FUNCIONA CORRECTAMENTE
-window.abrirModalImagen = function (categoryName, imageIndex) {
+// ✅ FUNCIÓN PRINCIPAL MODIFICADA - DETECTA VIDEO O IMAGEN
+window.abrirModalImagen = (categoryName, imageIndex) => {
     const category = categoryData[categoryName]
     if (!category || !category.images[imageIndex]) return
 
+    const imageData = category.images[imageIndex]
+
+    // ✅ SI ES MODELADO 3D Y TIENE VIDEO → MODAL DE VIDEO
+    if (category.hasVideo && imageData.video) {
+        abrirModalVideo(categoryName, imageIndex)
+    } else {
+        // ✅ RESTO DE CATEGORÍAS → TU MODAL ORIGINAL
+        abrirModalImagenOriginal(categoryName, imageIndex)
+    }
+}
+
+// ✅ TU FUNCIÓN ORIGINAL PARA IMÁGENES (SIN CAMBIOS)
+function abrirModalImagenOriginal(categoryName, imageIndex) {
+    const category = categoryData[categoryName]
     const imageData = category.images[imageIndex]
 
     const modal = document.getElementById("detailModal")
@@ -350,7 +386,188 @@ window.abrirModalImagen = function (categoryName, imageIndex) {
     modal.offsetHeight
 }
 
-// REEMPLAZA la función openCarousel con esta versión corregida:
+// ✅ NUEVA FUNCIÓN PARA MODAL DE VIDEO (SOLO MODELADO 3D)
+function abrirModalVideo(categoryName, imageIndex) {
+    const category = categoryData[categoryName]
+    const imageData = category.images[imageIndex]
+
+    // Remover modal existente si existe
+    const existingModal = document.getElementById("videoModal")
+    if (existingModal) {
+        document.body.removeChild(existingModal)
+    }
+
+    // Crear modal de video
+    const modal = document.createElement("div")
+    modal.id = "videoModal"
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 4000;
+        backdrop-filter: blur(15px);
+        animation: fadeInModal 0.3s ease-out;
+    `
+
+    modal.innerHTML = `
+        <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+            <button onclick="cerrarVideoModal()" style="
+                background: none;
+                border: none;
+                color: white;
+                font-size: 2rem;
+                cursor: pointer;
+                padding: 5px 10px;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            ">&times;</button>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 30px; align-items: center;">
+            <div style="
+                width: 100%;
+                position: relative;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                background: #000;
+            ">
+                <video id="modalVideo" style="
+                    width: 100%;
+                    height: auto;
+                    min-height: 400px;
+                    max-height: 70vh;
+                    object-fit: contain;
+                    border-radius: 15px;
+                    background: #000;
+                " controls muted poster="${imageData.src}">
+                    <source src="${imageData.video}" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+                
+                <div id="playButton" style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: rgba(163, 230, 53, 0.9);
+                    color: #333;
+                    padding: 20px 30px;
+                    border-radius: 50px;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 700;
+                    cursor: pointer;
+                    z-index: 10;
+                    transition: all 0.3s ease;
+                    border: none;
+                    font-size: 1.2rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                ">
+                    ▶ Reproducir Video
+                </div>
+            </div>
+            
+            <div style="width: 100%; text-align: center; max-width: 800px;">
+                <h2 style="
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    color: #a3e635;
+                    margin-bottom: 20px;
+                    line-height: 1.2;
+                    font-family: 'Nunito', sans-serif;
+                ">${imageData.title}</h2>
+                
+                <p style="
+                    font-size: 1.2rem;
+                    line-height: 1.6;
+                    color: #e0e0e0;
+                    font-family: 'Nunito', sans-serif;
+                    margin: 0;
+                ">${imageData.description}</p>
+            </div>
+        </div>
+    `
+
+    document.body.appendChild(modal)
+
+    // Configurar video
+    setTimeout(() => {
+        const video = document.getElementById("modalVideo")
+        const playButton = document.getElementById("playButton")
+
+        if (video && playButton) {
+            const playVideo = () => {
+                video
+                    .play()
+                    .then(() => {
+                        playButton.style.display = "none"
+                    })
+                    .catch((error) => {
+                        console.log("Error al reproducir:", error)
+                    })
+            }
+
+            playButton.addEventListener("click", playVideo)
+
+            video.addEventListener("click", () => {
+                if (video.paused) {
+                    playVideo()
+                } else {
+                    video.pause()
+                    playButton.style.display = "flex"
+                }
+            })
+
+            video.addEventListener("play", () => {
+                playButton.style.display = "none"
+            })
+
+            video.addEventListener("pause", () => {
+                playButton.style.display = "flex"
+            })
+
+            // Intentar autoplay
+            video
+                .play()
+                .then(() => {
+                    playButton.style.display = "none"
+                })
+                .catch(() => {
+                    console.log("Autoplay bloqueado")
+                })
+        }
+    }, 100)
+
+    // Cerrar modal
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            window.cerrarVideoModal()
+        }
+    })
+}
+
+// ✅ FUNCIÓN PARA CERRAR VIDEO MODAL
+window.cerrarVideoModal = () => {
+    const modal = document.getElementById("videoModal")
+    if (modal) {
+        const video = modal.querySelector("video")
+        if (video) {
+            video.pause()
+            video.currentTime = 0
+        }
+        document.body.removeChild(modal)
+    }
+}
+
+// TU FUNCIÓN ORIGINAL openCarousel (SIN CAMBIOS)
 function openCarousel(categoryName) {
     const modal = document.getElementById("carouselModal")
     const title = document.getElementById("carouselTitle")
@@ -447,7 +664,7 @@ function openCarousel(categoryName) {
         `
 
         // ✅ ONCLICK CORRECTO - SIN CONFLICTOS
-        imgElement.onclick = () => abrirModalImagen(categoryName, index)
+        imgElement.onclick = () => window.abrirModalImagen(categoryName, index)
 
         carouselContainer.appendChild(imgElement)
     }
@@ -486,7 +703,7 @@ function openCarousel(categoryName) {
     modal.classList.remove("hidden")
 }
 
-// Navegación del carrusel
+// TUS FUNCIONES ORIGINALES (SIN CAMBIOS)
 function nextSlide() {
     const items = document.querySelectorAll(".carousel-item")
     const indicators = document.querySelectorAll(".carousel-indicator")
@@ -582,6 +799,9 @@ function setupModals() {
 
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
+            // ✅ CERRAR VIDEO MODAL TAMBIÉN
+            window.cerrarVideoModal()
+
             if (detailModal && !detailModal.classList.contains("hidden")) {
                 detailModal.classList.add("hidden")
                 detailModal.style.display = "none"
