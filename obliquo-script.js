@@ -4,7 +4,7 @@ const totalSections = 2
 let isScrolling = false
 let currentCarouselIndex = 0
 
-// ✅ TUS DATOS CON ENLACES EN LAS DESCRIPCIONES
+// ✅ TUS DATOS CON MÚLTIPLES IMÁGENES POR PROYECTO
 const categoryData = {
     "Diseño Gráfico": {
         hasVideo: false,
@@ -14,30 +14,41 @@ const categoryData = {
                 title: "Identidad Visual Corporativa",
                 description:
                     "Trabajo de poster creativo publicitando un tour del cantante Shawn Mendes. Realizado en Adobe Illustrator.",
+                gallery: [
+                    "./public/diseñoGrafico/1-a.jpg",
+                    "./public/diseñoGrafico/1-b.jpg",
+                ],
             },
             {
                 src: "./public/diseñoGrafico/2-a.jpg",
                 title: "Diseño Editorial Moderno",
                 description:
                     "Trabajo de poster cinematográfico sobre la película IT de 2017, haciendo alusión a la frase de Todos flotan… y cuando este aquí abajo, tú también flotaras del personaje Pennywise Realizado en Adobe Photoshop",
+                gallery: ["./public/diseñoGrafico/2-a.jpg", "./public/diseñoGrafico/2-b.jpg"],
             },
             {
                 src: "./public/diseñoGrafico/3-a.jpg",
                 title: "Packaging Innovador",
                 description:
                     "Trabajo de portada para libro biográfico de Stephen King, donde lo vemos acompañado de algunos de sus personajes más populares. Realizado en Adobe Illustrator.",
+                gallery: ["./public/diseñoGrafico/3-a.jpg", "./public/diseñoGrafico/3-b.jpg"],
             },
             {
                 src: "./public/diseñoGrafico/4-a.jpg",
                 title: "Branding Estratégico",
                 description:
                     "Trabajo de montaje sobre lo antiguo contrastando con la modernidad como diseño de estampa de remera. Realizado en Adobe Photoshop.",
+                gallery: [
+                    "./public/diseñoGrafico/4-a.jpg",
+                    "./public/diseñoGrafico/4-b.jpg",
+                ],
             },
             {
                 src: "./public/diseñoGrafico/5.jpg",
                 title: "Diseño de Logotipos",
                 description:
                     "Trabajo de branding de una editorial de libros dedicada a publicar a nuevos escritores y sacar nuevas ediciones de clásicos del género del terror, misterio y crimen. Realizado en Adobe Illustrator.",
+                gallery: ["./public/diseñoGrafico/5.jpg", "./public/diseñoGrafico/5-a.jpg", "./public/diseñoGrafico/5-b.jpg", "./public/diseñoGrafico/5-c.jpg", "./public/diseñoGrafico/5-d.jpg", "./public/diseñoGrafico/5-e.jpg"],
             },
         ],
     },
@@ -47,38 +58,47 @@ const categoryData = {
             {
                 src: "./public/motion/1.jpg",
                 title: "Animación 2D Creativa",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.",
+                description: "Proyecto inspirado en la marca Adidas. Incentiva a que las personas se animen a correr independientemente de ser atletas o ganar un premio, ya que la importancia esta en hacerlo sin pensar la forma o condición de cada uno. Realizado con tratamiento fotográfico de collage y recortes, editado en After Effects.",
+                gallery: ["./public/motion/1.jpg"],
             },
             {
                 src: "./public/motion/2.jpg",
                 title: "Efectos Visuales Dinámicos",
-                description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+                description: "Trabajo creativo orientado a publicidad para Hamburguesas Kiddo. Centrado en mostrar las hamburguesas populares de la marca y su sabor. Realizado con ilustración vectorial y animado en After Effects.",
+                gallery: ["./public/motion/2.jpg"],
             },
             {
                 src: "./public/motion/3.jpg",
                 title: "Transiciones Cinematográficas",
-                description: "Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.",
+                description: "Proyecto inspirado en la marca Complot. El mismo busca lucir la temporada 2024 y su versatilidad con la identidad de Complot. Realizado con recortes de ropa de la marca, con técnica de motion graphics en After Effects.",
+                gallery: ["./public/motion/3.jpg"],
             },
             {
                 src: "./public/motion/4.jpg",
                 title: "Animación de Personajes",
-                description: "Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.",
+                description: "Trabajo creativo orientado a publicidad de un sabor de café limitado de Sabrina Carpenter en colaboración con la marca Alfred. Centrado en la letra del éxito musical “Espresso” se muestra el atractivo del café y la colaboración de la cantante con la marca. Realizado con ilustración vectorial y animado en After Effects.",
+                gallery: [
+                    "./public/motion/4.jpg",
+                ],
             },
             {
                 src: "./public/motion/5.jpg",
                 title: "Motion Graphics Corporativo",
                 description:
                     " Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus.",
+                gallery: ["./public/motion/5.jpg", "./public/motion/5-b.jpg"],
             },
         ],
     },
     "Diseño Publicitario": {
-        hasVideo: false,
+        hasVideo: true,
         images: [
             {
                 src: "./public/carrousel-campanias/1.jpg",
                 title: "Campaña Publicitaria Integral",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt mauris eu risus.",
+                video: "public/carrousel-campanias/Videocaso_FRESCA.mp4", // ✅ VIDEO
+                description: "Proyecto inspirado en Spotify para fomentar descargas de la app. Se hace un vistazo a la versatilidad de contenido para conectar con el publico e incentivarlos a sumarse a la plataforma. Realizado con técnica de motion graphics en After Effects.",
+                gallery: ["./public/carrousel-campanias/1.jpg"],
             },
         ],
     },
@@ -88,12 +108,14 @@ const categoryData = {
             {
                 src: "./public/marchan/1.jpg",
                 title: "Productos Promocionales",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat accumsan nulla.",
+                description: "Diseño de merch inspirado en el álbum “eternal sunshine” de Ariana Grande lanzado en 2024. ¿Las canciones “Yes, and?” y “Saturn Returns Interlude” son parte de las piezas centrales. Realizado en Adobe Photoshop.",
+                gallery: ["./public/marchan/1.jpg"],
             },
             {
                 src: "./public/marchan/2.jpg",
                 title: "Merchandising Corporativo",
-                description: "Pellentesque dapibus hendrerit tortor. Praesent egestas tristique nibh.",
+                description: "Diseño limitado de remera sobre álbum “Un año sin ti” de Bad Bunny lanzado en 2022. Realizado en Adobe Illustrator.",
+                gallery: ["./public/marchan/2.jpg"],
             },
         ],
     },
@@ -105,18 +127,21 @@ const categoryData = {
                 title: "Sitio Web Responsivo",
                 description:
                     "Página web informativa de la organización Glutenzero, dedicada a difundir información sobre la celiaquía. Dentro de la web se pueden encontrar recetas, cuidado y mitos que se difunden sobre la celiaquía. Ver sitio: https://glutenzero.obliquo.site/",
+                gallery: ["./public/diseñoWeb/1.jpg"],
             },
             {
                 src: "./public/diseñoWeb/2.jpg",
                 title: "E-commerce Moderno",
                 description:
                     "E-commerce de la tienda de mascotas Pet Pats, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. Ver sitio: https://petpats.obliquo.site/",
+                gallery: ["./public/diseñoWeb/2.jpg"],
             },
             {
                 src: "./public/diseñoWeb/3.jpg",
                 title: "Landing Page Optimizada",
                 description:
                     "Landing page sobre la aplicación Gea, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. Ver sitio: https://obliquo.site/",
+                gallery: ["./public/diseñoWeb/3.jpg"],
             },
         ],
     },
@@ -172,13 +197,13 @@ function convertUrlsToLinks(text) {
         const fullUrl = url.startsWith("http") ? url : `https://${url}`
 
         return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer" style="
-            color: #a3e635;
-            text-decoration: underline;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        " onmouseover="this.style.color='#84cc16'; this.style.textShadow='0 0 8px rgba(163, 230, 53, 0.6)'" 
-           onmouseout="this.style.color='#a3e635'; this.style.textShadow='none'">${url}</a>`
+              color: #a3e635;
+              text-decoration: underline;
+              font-weight: 600;
+              transition: all 0.3s ease;
+              cursor: pointer;
+          " onmouseover="this.style.color='#84cc16'; this.style.textShadow='0 0 8px rgba(163, 230, 53, 0.6)'" 
+             onmouseout="this.style.color='#a3e635'; this.style.textShadow='none'">${url}</a>`
     })
 }
 
@@ -380,12 +405,262 @@ window.abrirModalImagen = (categoryName, imageIndex) => {
     if (category.hasVideo && imageData.video) {
         abrirModalVideo(categoryName, imageIndex)
     } else {
-        // ✅ RESTO DE CATEGORÍAS → TU MODAL ORIGINAL
-        abrirModalImagenOriginal(categoryName, imageIndex)
+        // ✅ RESTO DE CATEGORÍAS → MODAL CON CARRUSEL DE IMÁGENES
+        abrirModalImagenConCarrusel(categoryName, imageIndex)
     }
 }
 
-// ✅ TU FUNCIÓN ORIGINAL PARA IMÁGENES - CON ENLACES CLICKEABLES
+// ✅ FUNCIÓN PARA MODAL CON CARRUSEL DE IMÁGENES - ESTRUCTURA MEJORADA
+function abrirModalImagenConCarrusel(categoryName, imageIndex) {
+    const category = categoryData[categoryName]
+    const imageData = category.images[imageIndex]
+
+    // Obtener galería de imágenes (si no existe, usar solo la imagen principal)
+    const gallery = imageData.gallery || [imageData.src]
+    let currentImageIndex = 0
+
+    // Remover modal existente si existe
+    const existingModal = document.getElementById("imageCarouselModal")
+    if (existingModal) {
+        document.body.removeChild(existingModal)
+    }
+
+    // ✅ CONVERTIR URLs EN ENLACES PARA EL MODAL
+    const descriptionWithLinks = convertUrlsToLinks(imageData.description)
+
+    // Crear modal con carrusel
+    const modal = document.createElement("div")
+    modal.id = "imageCarouselModal"
+    modal.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.95);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 4000;
+          backdrop-filter: blur(15px);
+          animation: fadeInModal 0.3s ease-out;
+          padding: 20px;
+          box-sizing: border-box;
+      `
+
+    modal.innerHTML = `
+          <div class="modal-container" style="
+              background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+              border-radius: 25px;
+              padding: 30px;
+              max-width: 95vw;
+              max-height: 95vh;
+              width: 1000px;
+              position: relative;
+              box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+              border: 2px solid #a3e635;
+              overflow-y: auto;
+              display: flex;
+              flex-direction: column;
+          ">
+              <!-- Botón de cerrar -->
+              <div style="display: flex; justify-content: flex-end; margin-bottom: 20px; flex-shrink: 0;">
+                  <button onclick="cerrarImageCarouselModal()" style="
+                      background: none;
+                      border: none;
+                      color: white;
+                      font-size: 2rem;
+                      cursor: pointer;
+                      padding: 5px 10px;
+                      border-radius: 50%;
+                      transition: all 0.3s ease;
+                  " onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.background='none'; this.style.transform='scale(1)'">&times;</button>
+              </div>
+              
+              <!-- ✅ CONTENEDOR DE IMAGEN CON CARRUSEL -->
+              <div class="image-carousel-container" style="
+                  width: 100%;
+                  position: relative;
+                  border-radius: 15px;
+                  overflow: hidden;
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                  background: #000;
+                  min-height: 300px;
+                  max-height: 50vh;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-shrink: 0;
+                  margin-bottom: 25px;
+              ">
+                  ${gallery.length > 1
+            ? `
+                  <button id="prevImageBtn" style="
+                      position: absolute;
+                      left: 15px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      background: rgba(0,0,0,0.8);
+                      color: white;
+                      border: none;
+                      font-size: 1.5rem;
+                      width: 50px;
+                      height: 50px;
+                      border-radius: 50%;
+                      cursor: pointer;
+                      z-index: 100;
+                      transition: all 0.3s ease;
+                  " onmouseover="this.style.background='rgba(163, 230, 53, 0.8)'; this.style.color='#333'" 
+                     onmouseout="this.style.background='rgba(0,0,0,0.8)'; this.style.color='white'">&#8249;</button>
+                  
+                  <button id="nextImageBtn" style="
+                      position: absolute;
+                      right: 15px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      background: rgba(0,0,0,0.8);
+                      color: white;
+                      border: none;
+                      font-size: 1.5rem;
+                      width: 50px;
+                      height: 50px;
+                      border-radius: 50%;
+                      cursor: pointer;
+                      z-index: 100;
+                      transition: all 0.3s ease;
+                  " onmouseover="this.style.background='rgba(163, 230, 53, 0.8)'; this.style.color='#333'" 
+                     onmouseout="this.style.background='rgba(0,0,0,0.8)'; this.style.color='white'">&#8250;</button>
+                  `
+            : ""
+        }
+                  
+                  <img id="modalCarouselImage" style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: contain;
+                      border-radius: 15px;
+                      background: #000;
+                      transition: opacity 0.3s ease;
+                  " src="${gallery[0]}" alt="${imageData.title}">
+              </div>
+              
+              <!-- ✅ INFORMACIÓN DEL PROYECTO (ESTRUCTURA MEJORADA) -->
+              <div class="text-content" style="
+                  width: 100%; 
+                  text-align: center; 
+                  max-width: 100%;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  hyphens: auto;
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  min-height: 0;
+                  padding: 0;
+              ">
+                  <h2 style="
+                      font-size: 2.5rem;
+                      font-weight: 700;
+                      color: #a3e635;
+                      margin-bottom: 20px;
+                      line-height: 1.2;
+                      font-family: 'Nunito', sans-serif;
+                      word-wrap: break-word;
+                      overflow-wrap: break-word;
+                      flex-shrink: 0;
+                  ">${imageData.title}</h2>
+                  
+                  <p style="
+                      font-size: 1.2rem;
+                      line-height: 1.6;
+                      color: #e0e0e0;
+                      font-family: 'Nunito', sans-serif;
+                      margin: 0;
+                      padding: 0;
+                      word-wrap: break-word;
+                      overflow-wrap: break-word;
+                      hyphens: auto;
+                      max-width: 100%;
+                      white-space: normal;
+                      text-align: left;
+                      flex: 1;
+                  ">${descriptionWithLinks}</p>
+              </div>
+          </div>
+      `
+
+    document.body.appendChild(modal)
+
+    // ✅ CONFIGURAR NAVEGACIÓN DEL CARRUSEL
+    if (gallery.length > 1) {
+        const prevBtn = document.getElementById("prevImageBtn")
+        const nextBtn = document.getElementById("nextImageBtn")
+        const modalImage = document.getElementById("modalCarouselImage")
+
+        // Función para cambiar imagen
+        window.changeImage = (index) => {
+            currentImageIndex = index
+            modalImage.style.opacity = "0"
+
+            setTimeout(() => {
+                modalImage.src = gallery[currentImageIndex]
+                modalImage.style.opacity = "1"
+            }, 150)
+        }
+
+        // Navegación con flechas
+        if (prevBtn) {
+            prevBtn.addEventListener("click", () => {
+                currentImageIndex = (currentImageIndex - 1 + gallery.length) % gallery.length
+                window.changeImage(currentImageIndex)
+            })
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener("click", () => {
+                currentImageIndex = (currentImageIndex + 1) % gallery.length
+                window.changeImage(currentImageIndex)
+            })
+        }
+
+        // Navegación con teclado
+        const handleKeyPress = (e) => {
+            if (e.key === "ArrowLeft") {
+                currentImageIndex = (currentImageIndex - 1 + gallery.length) % gallery.length
+                window.changeImage(currentImageIndex)
+            } else if (e.key === "ArrowRight") {
+                currentImageIndex = (currentImageIndex + 1) % gallery.length
+                window.changeImage(currentImageIndex)
+            }
+        }
+
+        document.addEventListener("keydown", handleKeyPress)
+
+        // Limpiar event listener al cerrar modal
+        modal.addEventListener("remove", () => {
+            document.removeEventListener("keydown", handleKeyPress)
+        })
+    }
+
+    // Cerrar modal
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            window.cerrarImageCarouselModal()
+        }
+    })
+}
+
+// ✅ FUNCIÓN PARA CERRAR MODAL DE CARRUSEL DE IMÁGENES
+window.cerrarImageCarouselModal = () => {
+    const modal = document.getElementById("imageCarouselModal")
+    if (modal) {
+        document.body.removeChild(modal)
+    }
+}
+
+// ✅ TU FUNCIÓN ORIGINAL PARA IMÁGENES - CON ENLACES CLICKEABLES (BACKUP)
 function abrirModalImagenOriginal(categoryName, imageIndex) {
     const category = categoryData[categoryName]
     const imageData = category.images[imageIndex]
@@ -413,7 +688,7 @@ function abrirModalImagenOriginal(categoryName, imageIndex) {
     modal.offsetHeight
 }
 
-// ✅ NUEVA FUNCIÓN PARA MODAL DE VIDEO - CON ENLACES CLICKEABLES
+// ✅ NUEVA FUNCIÓN PARA MODAL DE VIDEO - ESTRUCTURA MEJORADA
 function abrirModalVideo(categoryName, imageIndex) {
     const category = categoryData[categoryName]
     const imageData = category.images[imageIndex]
@@ -431,114 +706,143 @@ function abrirModalVideo(categoryName, imageIndex) {
     const modal = document.createElement("div")
     modal.id = "videoModal"
     modal.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.95);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 4000;
-        backdrop-filter: blur(15px);
-        animation: fadeInModal 0.3s ease-out;
-    `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.95);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 4000;
+          backdrop-filter: blur(15px);
+          animation: fadeInModal 0.3s ease-out;
+          padding: 20px;
+          box-sizing: border-box;
+      `
 
     modal.innerHTML = `
-        <div class="modal-container" style="
-            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-            border-radius: 25px;
-            padding: 40px;
-            max-width: 95vw;
-            max-height: 95vh;
-            width: 1000px;
-            position: relative;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
-            border: 2px solid #a3e635;
-        ">
-            <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
-                <button onclick="cerrarVideoModal()" style="
-                    background: none;
-                    border: none;
-                    color: white;
-                    font-size: 2rem;
-                    cursor: pointer;
-                    padding: 5px 10px;
-                    border-radius: 50%;
-                    transition: all 0.3s ease;
-                " onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1.1)'" 
-                   onmouseout="this.style.background='none'; this.style.transform='scale(1)'">&times;</button>
-            </div>
-            
-            <div style="display: flex; flex-direction: column; gap: 30px; align-items: center;">
-                <div style="
-                    width: 100%;
-                    position: relative;
-                    border-radius: 15px;
-                    overflow: hidden;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-                    background: #000;
-                ">
-                    <video id="modalVideo" style="
-                        width: 100%;
-                        height: auto;
-                        min-height: 400px;
-                        max-height: 70vh;
-                        object-fit: contain;
-                        border-radius: 15px;
-                        background: #000;
-                    " controls muted poster="${imageData.src}">
-                        <source src="${imageData.video}" type="video/mp4">
-                        Tu navegador no soporta el elemento video.
-                    </video>
-                    
-                    <div id="playButton" style="
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background: rgba(163, 230, 53, 0.9);
-                        color: #333;
-                        padding: 20px 30px;
-                        border-radius: 50px;
-                        font-family: 'Nunito', sans-serif;
-                        font-weight: 700;
-                        cursor: pointer;
-                        z-index: 10;
-                        transition: all 0.3s ease;
-                        border: none;
-                        font-size: 1.2rem;
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                    " onmouseover="this.style.background='#a3e635'; this.style.transform='translate(-50%, -50%) scale(1.05)'" 
-                       onmouseout="this.style.background='rgba(163, 230, 53, 0.9)'; this.style.transform='translate(-50%, -50%) scale(1)'">
-                        ▶ Reproducir Video
-                    </div>
-                </div>
-                
-                <div style="width: 100%; text-align: center; max-width: 800px;">
-                    <h2 style="
-                        font-size: 2.5rem;
-                        font-weight: 700;
-                        color: #a3e635;
-                        margin-bottom: 20px;
-                        line-height: 1.2;
-                        font-family: 'Nunito', sans-serif;
-                    ">${imageData.title}</h2>
-                    
-                    <p style="
-                        font-size: 1.2rem;
-                        line-height: 1.6;
-                        color: #e0e0e0;
-                        font-family: 'Nunito', sans-serif;
-                        margin: 0;
-                    ">${descriptionWithLinks}</p>
-                </div>
-            </div>
-        </div>
-    `
+          <div class="modal-container" style="
+              background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+              border-radius: 25px;
+              padding: 30px;
+              max-width: 95vw;
+              max-height: 95vh;
+              width: 1000px;
+              position: relative;
+              box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+              border: 2px solid #a3e635;
+              overflow-y: auto;
+              display: flex;
+              flex-direction: column;
+          ">
+              <div style="display: flex; justify-content: flex-end; margin-bottom: 20px; flex-shrink: 0;">
+                  <button onclick="cerrarVideoModal()" style="
+                      background: none;
+                      border: none;
+                      color: white;
+                      font-size: 2rem;
+                      cursor: pointer;
+                      padding: 5px 10px;
+                      border-radius: 50%;
+                      transition: all 0.3s ease;
+                  " onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1.1)'" 
+                     onmouseout="this.style.background='none'; this.style.transform='scale(1)'">&times;</button>
+              </div>
+              
+              <div class="video-container" style="
+                  width: 100%;
+                  position: relative;
+                  border-radius: 15px;
+                  overflow: hidden;
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                  background: #000;
+                  flex-shrink: 0;
+                  margin-bottom: 25px;
+              ">
+                  <video id="modalVideo" style="
+                      width: 100%;
+                      height: auto;
+                      min-height: 300px;
+                      max-height: 50vh;
+                      object-fit: contain;
+                      border-radius: 15px;
+                      background: #000;
+                  " controls muted poster="${imageData.src}">
+                      <source src="${imageData.video}" type="video/mp4">
+                      Tu navegador no soporta el elemento video.
+                  </video>
+                  
+                  <div id="playButton" style="
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      background: rgba(163, 230, 53, 0.9);
+                      color: #333;
+                      padding: 20px 30px;
+                      border-radius: 50px;
+                      font-family: 'Nunito', sans-serif;
+                      font-weight: 700;
+                      cursor: pointer;
+                      z-index: 10;
+                      transition: all 0.3s ease;
+                      border: none;
+                      font-size: 1.2rem;
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                  " onmouseover="this.style.background='#a3e635'; this.style.transform='translate(-50%, -50%) scale(1.05)'" 
+                     onmouseout="this.style.background='rgba(163, 230, 53, 0.9)'; this.style.transform='translate(-50%, -50%) scale(1)'">
+                      ▶ Reproducir Video
+                  </div>
+              </div>
+              
+              <div class="text-content" style="
+                  width: 100%; 
+                  text-align: center; 
+                  max-width: 100%;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  hyphens: auto;
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  min-height: 0;
+                  padding: 0;
+              ">
+                  <h2 style="
+                      font-size: 2.5rem;
+                      font-weight: 700;
+                      color: #a3e635;
+                      margin-bottom: 20px;
+                      line-height: 1.2;
+                      font-family: 'Nunito', sans-serif;
+                      word-wrap: break-word;
+                      overflow-wrap: break-word;
+                      flex-shrink: 0;
+                  ">${imageData.title}</h2>
+                  
+                  <p style="
+                      font-size: 1.2rem;
+                      line-height: 1.6;
+                      color: #e0e0e0;
+                      font-family: 'Nunito', sans-serif;
+                      margin: 0;
+                      padding: 0;
+                      word-wrap: break-word;
+                      overflow-wrap: break-word;
+                      hyphens: auto;
+                      max-width: 100%;
+                      white-space: normal;
+                      text-align: left;
+                      flex: 1;
+                  ">${descriptionWithLinks}</p>
+              </div>
+          </div>
+      `
 
     document.body.appendChild(modal)
 
@@ -611,7 +915,7 @@ window.cerrarVideoModal = () => {
     }
 }
 
-// TU FUNCIÓN ORIGINAL openCarousel (SIN CAMBIOS)
+// ✅ FUNCIÓN openCarousel MODIFICADA - SIN INDICADORES
 function openCarousel(categoryName) {
     const modal = document.getElementById("carouselModal")
     const title = document.getElementById("carouselTitle")
@@ -620,7 +924,8 @@ function openCarousel(categoryName) {
 
     title.textContent = categoryName
     track.innerHTML = ""
-    indicators.innerHTML = ""
+    // ✅ NO LIMPIAR INDICADORES - YA NO LOS USAMOS
+    // indicators.innerHTML = ""
 
     const category = categoryData[categoryName]
     if (!category) return
@@ -628,12 +933,12 @@ function openCarousel(categoryName) {
     // Crear contenedor principal
     const carouselContainer = document.createElement("div")
     carouselContainer.style.cssText = `
-        position: relative;
-        width: 100%;
-        height: 400px;
-        overflow: hidden;
-        border-radius: 8px;
-    `
+          position: relative;
+          width: 100%;
+          height: 400px;
+          overflow: hidden;
+          border-radius: 8px;
+      `
 
     // ✅ CREAR SOLO UNA IMAGEN VISIBLE A LA VEZ
     let currentImageIndex = 0
@@ -647,47 +952,47 @@ function openCarousel(categoryName) {
             const leftArrow = document.createElement("button")
             leftArrow.innerHTML = "&#8249;"
             leftArrow.style.cssText = `
-                position: absolute;
-                left: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                background: rgba(0,0,0,0.8);
-                color: white;
-                border: none;
-                font-size: 30px;
-                width: 45px;
-                height: 45px;
-                border-radius: 50%;
-                cursor: pointer;
-                z-index: 100;
-            `
+                  position: absolute;
+                  left: 15px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background: rgba(0,0,0,0.8);
+                  color: white;
+                  border: none;
+                  font-size: 30px;
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  cursor: pointer;
+                  z-index: 100;
+              `
             leftArrow.onclick = () => {
                 currentImageIndex = (currentImageIndex - 1 + category.images.length) % category.images.length
                 showImage(currentImageIndex)
-                updateIndicators()
+                // ✅ NO ACTUALIZAR INDICADORES - YA NO EXISTEN
             }
 
             const rightArrow = document.createElement("button")
             rightArrow.innerHTML = "&#8250;"
             rightArrow.style.cssText = `
-                position: absolute;
-                right: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                background: rgba(0,0,0,0.8);
-                color: white;
-                border: none;
-                font-size: 30px;
-                width: 45px;
-                height: 45px;
-                border-radius: 50%;
-                cursor: pointer;
-                z-index: 100;
-            `
+                  position: absolute;
+                  right: 15px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background: rgba(0,0,0,0.8);
+                  color: white;
+                  border: none;
+                  font-size: 30px;
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  cursor: pointer;
+                  z-index: 100;
+              `
             rightArrow.onclick = () => {
                 currentImageIndex = (currentImageIndex + 1) % category.images.length
                 showImage(currentImageIndex)
-                updateIndicators()
+                // ✅ NO ACTUALIZAR INDICADORES - YA NO EXISTEN
             }
 
             carouselContainer.appendChild(leftArrow)
@@ -700,12 +1005,12 @@ function openCarousel(categoryName) {
         imgElement.src = image.src
         imgElement.alt = image.title
         imgElement.style.cssText = `
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            cursor: pointer;
-            display: block;
-        `
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              cursor: pointer;
+              display: block;
+          `
 
         // ✅ ONCLICK CORRECTO - SIN CONFLICTOS
         imgElement.onclick = () => window.abrirModalImagen(categoryName, index)
@@ -713,33 +1018,11 @@ function openCarousel(categoryName) {
         carouselContainer.appendChild(imgElement)
     }
 
-    function updateIndicators() {
-        const indicators = document.querySelectorAll(".carousel-indicator")
-        indicators.forEach((indicator, idx) => {
-            indicator.style.background = idx === currentImageIndex ? "#a3e635" : "rgba(255,255,255,0.5)"
-        })
-    }
+    // ✅ NO CREAR INDICADORES - FUNCIÓN ELIMINADA
+    // function updateIndicators() { ... }
 
-    // Crear indicadores
-    category.images.forEach((_, index) => {
-        const indicator = document.createElement("div")
-        indicator.className = "carousel-indicator"
-        indicator.style.cssText = `
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: ${index === 0 ? "#a3e635" : "rgba(255,255,255,0.5)"};
-            margin: 0 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        `
-        indicator.onclick = () => {
-            currentImageIndex = index
-            showImage(currentImageIndex)
-            updateIndicators()
-        }
-        indicators.appendChild(indicator)
-    })
+    // ✅ NO CREAR INDICADORES - BUCLE ELIMINADO
+    // category.images.forEach((_, index) => { ... })
 
     // Mostrar primera imagen
     showImage(0)
@@ -843,8 +1126,9 @@ function setupModals() {
 
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
-            // ✅ CERRAR VIDEO MODAL TAMBIÉN
+            // ✅ CERRAR TODOS LOS MODALES
             window.cerrarVideoModal()
+            window.cerrarImageCarouselModal()
 
             if (detailModal && !detailModal.classList.contains("hidden")) {
                 detailModal.classList.add("hidden")
@@ -943,3 +1227,4 @@ function createObliquoConfetti() {
 }
 
 setTimeout(createObliquoConfetti, 1000)
+  

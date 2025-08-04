@@ -1,5 +1,5 @@
-/* ✅ NUNITO PARA OBLIQUO-STYLES.CSS */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+/* ✅ FUENTE NUNITO CORREGIDA - IMPORTACIÓN ALTERNATIVA */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap");
 
 * {
     margin: 0;
@@ -11,7 +11,7 @@ html,
 body {
     height: 100%;
     overflow: hidden;
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
@@ -505,7 +505,6 @@ body {
     overflow: hidden;
     border-radius: 15px;
     background: #2a2a2a;
-    /* Fondo para espacios vacíos */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -540,7 +539,6 @@ body {
     max-height: 100%;
     width: auto;
     height: auto;
-    /* ✅ OBJECT-FIT: CONTAIN - La imagen se ve completa */
     object-fit: contain;
     object-position: center;
     border-radius: 10px;
@@ -551,21 +549,6 @@ body {
 
 .carousel-image:hover {
     transform: scale(1.02);
-}
-
-/* ✅ ALTERNATIVA: Si quieres que llene todo el espacio */
-.carousel-image-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.carousel-image-cover:hover {
-    transform: scale(1.05);
 }
 
 .carousel-indicators {
@@ -657,6 +640,7 @@ body {
     position: relative;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
     border: 2px solid #a3e635;
+    overflow: hidden;
 }
 
 .detail-header {
@@ -671,7 +655,6 @@ body {
     align-items: center;
 }
 
-/* ✅ IMAGEN DE DETALLE AJUSTADA */
 .detail-image {
     flex: 1;
     max-width: 60%;
@@ -694,6 +677,8 @@ body {
     color: #a3e635;
     margin-bottom: 20px;
     line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .detail-description {
@@ -701,6 +686,161 @@ body {
     line-height: 1.6;
     color: #e0e0e0;
     margin: 0;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+}
+
+/* ✅ ESTILOS PARA EL NUEVO MODAL CON CARRUSEL DE IMÁGENES */
+
+/* Animación para el modal */
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ✅ ESTILOS MEJORADOS PARA MODALES - SOLUCIÓN AL PROBLEMA DE TEXTO */
+#imageCarouselModal,
+#videoModal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.95) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 4000 !important;
+    backdrop-filter: blur(15px) !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+}
+
+#imageCarouselModal .modal-container,
+#videoModal .modal-container {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a) !important;
+    border-radius: 25px !important;
+    padding: 30px !important;
+    max-width: 95vw !important;
+    max-height: 95vh !important;
+    width: 1000px !important;
+    position: relative !important;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7) !important;
+    border: 2px solid #a3e635 !important;
+    overflow-y: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* ✅ CONTENEDOR DE IMAGEN MEJORADO */
+#imageCarouselModal .image-carousel-container,
+#videoModal .video-container {
+    width: 100% !important;
+    position: relative !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    background: #000 !important;
+    min-height: 300px !important;
+    max-height: 50vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin-bottom: 25px !important;
+}
+
+/* ✅ CONTENEDOR DE TEXTO COMPLETAMENTE ARREGLADO */
+#imageCarouselModal .text-content,
+#videoModal .text-content {
+    width: 100% !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+}
+
+#imageCarouselModal h2,
+#videoModal h2 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #a3e635 !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+    font-family: "Nunito", sans-serif !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    flex-shrink: 0 !important;
+}
+
+#imageCarouselModal p,
+#videoModal p {
+    font-size: 1.2rem !important;
+    line-height: 1.6 !important;
+    color: #e0e0e0 !important;
+    font-family: "Nunito", sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: left !important;
+    flex: 1 !important;
+}
+
+/* ✅ ESTILOS PARA ENLACES EN DESCRIPCIONES */
+#imageCarouselModal a,
+#videoModal a,
+#detailDescription a {
+    color: #a3e635 !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+#imageCarouselModal a:hover,
+#videoModal a:hover,
+#detailDescription a:hover {
+    color: #84cc16 !important;
+    text-shadow: 0 0 8px rgba(163, 230, 53, 0.6) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ✅ EFECTOS HOVER PARA FLECHAS DE NAVEGACIÓN */
+.image-carousel-container button {
+    transition: all 0.3s ease !important;
+}
+
+.image-carousel-container button:hover {
+    transform: translateY(-50%) scale(1.1) !important;
+    box-shadow: 0 4px 12px rgba(163, 230, 53, 0.4) !important;
+}
+
+/* ✅ TRANSICIÓN SUAVE PARA CAMBIO DE IMAGEN */
+#modalCarouselImage {
+    transition: opacity 0.3s ease !important;
 }
 
 /* ✅ LOADING STATE PARA IMÁGENES */
@@ -808,7 +948,7 @@ body {
         font-size: 1.5rem;
     }
 
-    /* ✅ RESPONSIVE PARA CARRUSEL */
+    /* ✅ RESPONSIVE PARA CARRUSEL Y MODALES */
     .carousel-container {
         width: 95vw;
         padding: 20px;
@@ -839,6 +979,8 @@ body {
     .detail-container {
         width: 95vw;
         padding: 25px;
+        max-height: 90vh;
+        overflow-y: auto;
     }
 
     .detail-content {
@@ -857,10 +999,71 @@ body {
 
     .detail-title {
         font-size: 2rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .detail-description {
         font-size: 1.1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        line-height: 1.5;
+    }
+
+    /* ✅ RESPONSIVE MEJORADO PARA NUEVOS MODALES */
+    #imageCarouselModal .modal-container,
+    #videoModal .modal-container {
+        width: 95vw !important;
+        padding: 20px !important;
+        max-height: 95vh !important;
+        overflow-y: auto !important;
+    }
+
+    #imageCarouselModal .image-carousel-container,
+    #videoModal .video-container {
+        min-height: 250px !important;
+        max-height: 40vh !important;
+    }
+
+    #imageCarouselModal h2,
+    #videoModal h2 {
+        font-size: 2rem !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    #imageCarouselModal p,
+    #videoModal p {
+        font-size: 1.1rem !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+        line-height: 1.5 !important;
+    }
+
+    #imageCarouselModal button {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.2rem !important;
+    }
+
+    #prevImageBtn {
+        left: 10px !important;
+    }
+
+    #nextImageBtn {
+        right: 10px !important;
+    }
+
+    #imageCarouselModal a,
+    #videoModal a {
+        font-size: 1.1rem !important;
+        padding: 2px 4px !important;
+        border-radius: 4px !important;
+        background: rgba(163, 230, 53, 0.1) !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
     }
 }
 
@@ -887,14 +1090,48 @@ body {
 
     .detail-container {
         padding: 20px;
+        max-height: 85vh;
     }
 
     .detail-title {
         font-size: 1.8rem;
+        line-height: 1.3;
     }
 
     .detail-description {
         font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* ✅ RESPONSIVE EXTRA PEQUEÑO PARA NUEVOS MODALES */
+    #imageCarouselModal .modal-container,
+    #videoModal .modal-container {
+        padding: 15px !important;
+        max-height: 95vh !important;
+    }
+
+    #imageCarouselModal .image-carousel-container,
+    #videoModal .video-container {
+        min-height: 200px !important;
+        max-height: 35vh !important;
+    }
+
+    #imageCarouselModal h2,
+    #videoModal h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+    }
+
+    #imageCarouselModal p,
+    #videoModal p {
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+    }
+
+    #imageCarouselModal button {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 1rem !important;
     }
 }
 
@@ -958,4 +1195,12 @@ body {
 
 .detail-modal {
     animation: fadeIn 0.3s ease-out;
+}
+
+#imageCarouselModal {
+    animation: fadeInModal 0.3s ease-out;
+}
+
+#videoModal {
+    animation: fadeInModal 0.3s ease-out;
 }
