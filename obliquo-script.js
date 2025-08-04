@@ -4,10 +4,10 @@ const totalSections = 2
 let isScrolling = false
 let currentCarouselIndex = 0
 
-// ✅ TUS DATOS ORIGINALES + VIDEO SOLO EN MODELADO 3D
+// ✅ TUS DATOS CON ENLACES EN LAS DESCRIPCIONES
 const categoryData = {
     "Diseño Gráfico": {
-        hasVideo: false, // ✅ SOLO IMÁGENES
+        hasVideo: false,
         images: [
             {
                 src: "./public/diseñoGrafico/1-a.jpg",
@@ -42,7 +42,7 @@ const categoryData = {
         ],
     },
     "Motion Graphics": {
-        hasVideo: false, // ✅ SOLO IMÁGENES
+        hasVideo: false,
         images: [
             {
                 src: "./public/motion/1.jpg",
@@ -73,7 +73,7 @@ const categoryData = {
         ],
     },
     "Diseño Publicitario": {
-        hasVideo: false, // ✅ SOLO IMÁGENES
+        hasVideo: false,
         images: [
             {
                 src: "./public/carrousel-campanias/1.jpg",
@@ -83,7 +83,7 @@ const categoryData = {
         ],
     },
     Merchandising: {
-        hasVideo: false, // ✅ SOLO IMÁGENES
+        hasVideo: false,
         images: [
             {
                 src: "./public/marchan/1.jpg",
@@ -98,25 +98,25 @@ const categoryData = {
         ],
     },
     "Diseño Web": {
-        hasVideo: false, // ✅ SOLO IMÁGENES
+        hasVideo: false,
         images: [
             {
                 src: "./public/diseñoWeb/1.jpg",
                 title: "Sitio Web Responsivo",
                 description:
-                    "Página web informativa de la organización Glutenzero, dedicada a difundir información sobre la celiaquía. Dentro de la web se pueden encontrar recetas, cuidado y mitos que se difunden sobre la celiaquía. https://glutenzero.obliquo.site/",
+                    "Página web informativa de la organización Glutenzero, dedicada a difundir información sobre la celiaquía. Dentro de la web se pueden encontrar recetas, cuidado y mitos que se difunden sobre la celiaquía. Ver sitio: https://glutenzero.obliquo.site/",
             },
             {
                 src: "./public/diseñoWeb/2.jpg",
                 title: "E-commerce Moderno",
                 description:
-                    "E-commerce de la tienda de mascotas Pet Pats, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. https://petpats.obliquo.site/",
+                    "E-commerce de la tienda de mascotas Pet Pats, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. Ver sitio: https://petpats.obliquo.site/",
             },
             {
                 src: "./public/diseñoWeb/3.jpg",
                 title: "Landing Page Optimizada",
                 description:
-                    "Landing page sobre la aplicación Gea, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. https://obliquo.site/",
+                    "Landing page sobre la aplicación Gea, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. Ver sitio: https://obliquo.site/",
             },
         ],
     },
@@ -127,34 +127,59 @@ const categoryData = {
                 src: "./public/3d/1.jpg",
                 title: "Modelado Arquitectónico",
                 video: "public/3d/video/OBLIQUO_reel.mp4", // ✅ VIDEO
-                description: "LModelo 3d inspirado en Chopper, el personaje de la serie de manga y franquicia “One Piece”, acompañado de elementos alusivos a la misma. Realizado en Zbrush y texturizado en Substance Painter. ArtStation:  https://www.artstation.com/artwork/6NJQZ6",
+                description:
+                    'Modelo 3d inspirado en Chopper, el personaje de la serie de manga y franquicia "One Piece", acompañado de elementos alusivos a la misma. Realizado en Zbrush y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/6NJQZ6',
             },
             {
                 src: "./public/3d/2.jpg",
                 title: "Renderizado Fotorrealista",
                 video: "public/3d/video/2.mp4", // ✅ VIDEO
-                description: "Modelo 3d construido a partir del estilo de armas cyberpunk. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/yDzaN9",
+                description:
+                    "Modelo 3d construido a partir del estilo de armas cyberpunk. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/yDzaN9",
             },
             {
                 src: "./public/3d/3.jpg",
                 title: "Animación 3D Avanzada",
                 video: "public/3d/video/3.mp4", // ✅ VIDEO
-                description: "Modelo 3d de gatito inspirado en Halloween ubicado en un cementerio para acompañar la estética del personaje. Realizado en Zbrush y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/XJ0Jol",
+                description:
+                    "Modelo 3d de gatito inspirado en Halloween ubicado en un cementerio para acompañar la estética del personaje. Realizado en Zbrush y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/XJ0Jol",
             },
             {
                 src: "./public/3d/4.jpg",
                 title: "Visualización de Productos",
                 video: "public/3d/video/4.mp4", // ✅ VIDEO
-                description: "Modelo 3d de reloj cucú con detalles y terminaciones de engranajes al estilo steampunk. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/39OKZg",
+                description:
+                    "Modelo 3d de reloj cucú con detalles y terminaciones de engranajes al estilo steampunk. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/39OKZg",
             },
             {
                 src: "./public/3d/5.jpg",
                 title: "Escenarios Virtuales",
                 video: "public/3d/video/5.mp4", // ✅ VIDEO
-                description: "Modelo 3d de radio radar retro con elementos agregados de tecnología de localización y pantallas. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/RyvA5r",
+                description:
+                    "Modelo 3d de radio radar retro con elementos agregados de tecnología de localización y pantallas. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/RyvA5r",
             },
         ],
     },
+}
+
+// ✅ FUNCIÓN PARA CONVERTIR URLs EN ENLACES CLICKEABLES
+function convertUrlsToLinks(text) {
+    // Regex para detectar URLs (http, https, www)
+    const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/g
+
+    return text.replace(urlRegex, (url) => {
+        // Asegurar que la URL tenga protocolo
+        const fullUrl = url.startsWith("http") ? url : `https://${url}`
+
+        return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer" style="
+            color: #a3e635;
+            text-decoration: underline;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        " onmouseover="this.style.color='#84cc16'; this.style.textShadow='0 0 8px rgba(163, 230, 53, 0.6)'" 
+           onmouseout="this.style.color='#a3e635'; this.style.textShadow='none'">${url}</a>`
+    })
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -360,7 +385,7 @@ window.abrirModalImagen = (categoryName, imageIndex) => {
     }
 }
 
-// ✅ TU FUNCIÓN ORIGINAL PARA IMÁGENES (SIN CAMBIOS)
+// ✅ TU FUNCIÓN ORIGINAL PARA IMÁGENES - CON ENLACES CLICKEABLES
 function abrirModalImagenOriginal(categoryName, imageIndex) {
     const category = categoryData[categoryName]
     const imageData = category.images[imageIndex]
@@ -376,7 +401,9 @@ function abrirModalImagenOriginal(categoryName, imageIndex) {
     image.src = imageData.src
     image.alt = imageData.title
     title.textContent = imageData.title
-    description.textContent = imageData.description
+
+    // ✅ CONVERTIR URLs EN ENLACES CLICKEABLES
+    description.innerHTML = convertUrlsToLinks(imageData.description)
 
     // Asegurar que el modal se muestre
     modal.classList.remove("hidden")
@@ -386,7 +413,7 @@ function abrirModalImagenOriginal(categoryName, imageIndex) {
     modal.offsetHeight
 }
 
-// ✅ NUEVA FUNCIÓN PARA MODAL DE VIDEO (SOLO MODELADO 3D)
+// ✅ NUEVA FUNCIÓN PARA MODAL DE VIDEO - CON ENLACES CLICKEABLES
 function abrirModalVideo(categoryName, imageIndex) {
     const category = categoryData[categoryName]
     const imageData = category.images[imageIndex]
@@ -396,6 +423,9 @@ function abrirModalVideo(categoryName, imageIndex) {
     if (existingModal) {
         document.body.removeChild(existingModal)
     }
+
+    // ✅ CONVERTIR URLs EN ENLACES PARA EL MODAL DE VIDEO
+    const descriptionWithLinks = convertUrlsToLinks(imageData.description)
 
     // Crear modal de video
     const modal = document.createElement("div")
@@ -416,82 +446,96 @@ function abrirModalVideo(categoryName, imageIndex) {
     `
 
     modal.innerHTML = `
-        <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
-            <button onclick="cerrarVideoModal()" style="
-                background: none;
-                border: none;
-                color: white;
-                font-size: 2rem;
-                cursor: pointer;
-                padding: 5px 10px;
-                border-radius: 50%;
-                transition: all 0.3s ease;
-            ">&times;</button>
-        </div>
-        
-        <div style="display: flex; flex-direction: column; gap: 30px; align-items: center;">
-            <div style="
-                width: 100%;
-                position: relative;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-                background: #000;
-            ">
-                <video id="modalVideo" style="
-                    width: 100%;
-                    height: auto;
-                    min-height: 400px;
-                    max-height: 70vh;
-                    object-fit: contain;
-                    border-radius: 15px;
-                    background: #000;
-                " controls muted poster="${imageData.src}">
-                    <source src="${imageData.video}" type="video/mp4">
-                    Tu navegador no soporta el elemento video.
-                </video>
-                
-                <div id="playButton" style="
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: rgba(163, 230, 53, 0.9);
-                    color: #333;
-                    padding: 20px 30px;
-                    border-radius: 50px;
-                    font-family: 'Nunito', sans-serif;
-                    font-weight: 700;
-                    cursor: pointer;
-                    z-index: 10;
-                    transition: all 0.3s ease;
+        <div class="modal-container" style="
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            border-radius: 25px;
+            padding: 40px;
+            max-width: 95vw;
+            max-height: 95vh;
+            width: 1000px;
+            position: relative;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+            border: 2px solid #a3e635;
+        ">
+            <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+                <button onclick="cerrarVideoModal()" style="
+                    background: none;
                     border: none;
-                    font-size: 1.2rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                ">
-                    ▶ Reproducir Video
-                </div>
+                    color: white;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    padding: 5px 10px;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1.1)'" 
+                   onmouseout="this.style.background='none'; this.style.transform='scale(1)'">&times;</button>
             </div>
             
-            <div style="width: 100%; text-align: center; max-width: 800px;">
-                <h2 style="
-                    font-size: 2.5rem;
-                    font-weight: 700;
-                    color: #a3e635;
-                    margin-bottom: 20px;
-                    line-height: 1.2;
-                    font-family: 'Nunito', sans-serif;
-                ">${imageData.title}</h2>
+            <div style="display: flex; flex-direction: column; gap: 30px; align-items: center;">
+                <div style="
+                    width: 100%;
+                    position: relative;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                    background: #000;
+                ">
+                    <video id="modalVideo" style="
+                        width: 100%;
+                        height: auto;
+                        min-height: 400px;
+                        max-height: 70vh;
+                        object-fit: contain;
+                        border-radius: 15px;
+                        background: #000;
+                    " controls muted poster="${imageData.src}">
+                        <source src="${imageData.video}" type="video/mp4">
+                        Tu navegador no soporta el elemento video.
+                    </video>
+                    
+                    <div id="playButton" style="
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: rgba(163, 230, 53, 0.9);
+                        color: #333;
+                        padding: 20px 30px;
+                        border-radius: 50px;
+                        font-family: 'Nunito', sans-serif;
+                        font-weight: 700;
+                        cursor: pointer;
+                        z-index: 10;
+                        transition: all 0.3s ease;
+                        border: none;
+                        font-size: 1.2rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    " onmouseover="this.style.background='#a3e635'; this.style.transform='translate(-50%, -50%) scale(1.05)'" 
+                       onmouseout="this.style.background='rgba(163, 230, 53, 0.9)'; this.style.transform='translate(-50%, -50%) scale(1)'">
+                        ▶ Reproducir Video
+                    </div>
+                </div>
                 
-                <p style="
-                    font-size: 1.2rem;
-                    line-height: 1.6;
-                    color: #e0e0e0;
-                    font-family: 'Nunito', sans-serif;
-                    margin: 0;
-                ">${imageData.description}</p>
+                <div style="width: 100%; text-align: center; max-width: 800px;">
+                    <h2 style="
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        color: #a3e635;
+                        margin-bottom: 20px;
+                        line-height: 1.2;
+                        font-family: 'Nunito', sans-serif;
+                    ">${imageData.title}</h2>
+                    
+                    <p style="
+                        font-size: 1.2rem;
+                        line-height: 1.6;
+                        color: #e0e0e0;
+                        font-family: 'Nunito', sans-serif;
+                        margin: 0;
+                    ">${descriptionWithLinks}</p>
+                </div>
             </div>
         </div>
     `
