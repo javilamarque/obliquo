@@ -131,16 +131,16 @@ const categoryData = {
             },
             {
                 src: "./public/diseñoWeb/2.jpg",
-                title: "E-commerce Moderno",
+                title: "Landing Page Optimizada",
                 description:
-                    "E-commerce de la tienda de mascotas Pet Pats, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. Ver sitio: https://petpats.obliquo.site/",
+                    "Landing page sobre la aplicación Gea, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. Ver sitio: https://obliquo.site/",
                 gallery: ["./public/diseñoWeb/2.jpg"],
             },
             {
                 src: "./public/diseñoWeb/3.jpg",
-                title: "Landing Page Optimizada",
+                title: "E-commerce Moderno ",
                 description:
-                    "Landing page sobre la aplicación Gea, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. Ver sitio: https://obliquo.site/",
+                    "        E-commerce de la tienda de mascotas Pet Pats, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. Ver sitio: https://petpats.obliquo.site/",
                 gallery: ["./public/diseñoWeb/3.jpg"],
             },
         ],
