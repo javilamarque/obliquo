@@ -28,42 +28,44 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 15px 40px;
     background: rgba(26, 26, 26, 0.9);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 70px;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    font-size: 2rem;
-    font-weight: bold;
-    perspective: 1000px;
-    transform-style: preserve-3d;
+    justify-content: flex-start;
+    height: 60px;
+    min-width: 120px;
+    padding-right: 20px;
 }
 
-.logo-container>div {
-    display: inline-block;
-    margin-right: 2px;
-    transform: rotateX(-15deg) rotateY(15deg);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.nav-logo {
+    height: 45px;
+    width: auto;
+    min-width: 100px;
+    max-width: 140px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: brightness(1.1);
+    transform: scaleX(1.2);
 }
 
-.logo-o,
-.logo-b,
-.logo-l,
-.logo-i,
-.logo-u,
-.logo-o2 {
-    color: white;
+.nav-logo:hover {
+    transform: scaleX(1.25) scale(1.05);
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(163, 230, 53, 0.3));
 }
 
-.logo-q {
-    color: #a3e635;
-    font-weight: 900;
-}
+/* Remover los estilos antiguos del logo de texto */
+/* .logo-container > div,
+.logo-o, .logo-b, .logo-l, .logo-i, .logo-u, .logo-o2, .logo-q {
+  // Estos estilos ya no son necesarios
+} */
 
 .navigation {
     display: flex;
@@ -972,6 +974,17 @@ body {
 
     .logo-container {
         font-size: 1.5rem;
+    }
+
+    .nav-logo {
+        height: 35px;
+        min-width: 80px;
+        max-width: 110px;
+        transform: scaleX(1.15);
+    }
+
+    .nav-logo:hover {
+        transform: scaleX(1.2) scale(1.05);
     }
 
     /* ✅ RESPONSIVE PARA CARRUSEL Y MODALES - COMPLETAMENTE ARREGLADO */
