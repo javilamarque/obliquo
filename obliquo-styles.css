@@ -732,9 +732,9 @@ body {
     background: linear-gradient(135deg, #1a1a1a, #2a2a2a) !important;
     border-radius: 25px !important;
     padding: 30px !important;
-    max-width: 95vw !important;
-    max-height: 95vh !important;
-    width: 1000px !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    width: 1100px !important;
     position: relative !important;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7) !important;
     border: 2px solid #a3e635 !important;
@@ -743,7 +743,7 @@ body {
     flex-direction: column !important;
 }
 
-/* ✅ CONTENEDOR DE IMAGEN COMPLETAMENTE ARREGLADO - RESPONSIVE Y SIN CORTES */
+/* ✅ CONTENEDOR DE IMAGEN COMPLETAMENTE ARREGLADO PARA POPUPS */
 #imageCarouselModal .image-carousel-container,
 #videoModal .video-container {
     width: 100% !important;
@@ -752,8 +752,8 @@ body {
     overflow: hidden !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
     background: #000 !important;
-    min-height: 400px !important;
-    max-height: 60vh !important;
+    min-height: 500px !important;
+    max-height: 70vh !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -761,7 +761,7 @@ body {
     margin-bottom: 25px !important;
 }
 
-/* ✅ IMAGEN DENTRO DEL MODAL - COMPLETAMENTE RESPONSIVE */
+/* ✅ IMAGEN DENTRO DEL MODAL - COMPLETAMENTE RESPONSIVE Y SIN CORTES */
 #imageCarouselModal img,
 #videoModal video {
     max-width: 100% !important;
@@ -1048,8 +1048,8 @@ body {
 
     #imageCarouselModal .image-carousel-container,
     #videoModal .video-container {
-        min-height: 300px !important;
-        max-height: 45vh !important;
+        min-height: 400px !important;
+        max-height: 60vh !important;
     }
 
     #imageCarouselModal h2,
@@ -1138,8 +1138,8 @@ body {
 
     #imageCarouselModal .image-carousel-container,
     #videoModal .video-container {
-        min-height: 250px !important;
-        max-height: 40vh !important;
+        min-height: 350px !important;
+        max-height: 55vh !important;
     }
 
     #imageCarouselModal h2,
@@ -1229,4 +1229,141 @@ body {
 
 #videoModal {
     animation: fadeInModal 0.3s ease-out;
+}
+
+/* ✅ ESTILOS PERSONALIZADOS PARA SCROLLBAR - TEMA OSCURO */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #a3e635, #84cc16);
+    border-radius: 10px;
+    border: 2px solid #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #84cc16, #65a30d);
+    box-shadow: 0 0 10px rgba(163, 230, 53, 0.4);
+    transform: scale(1.05);
+}
+
+::-webkit-scrollbar-corner {
+    background: #1a1a1a;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #a3e635 #1a1a1a;
+}
+
+/* ✅ ESTILOS ESPECÍFICOS PARA MODALES */
+.modal-container,
+.carousel-container,
+.detail-container,
+#imageCarouselModal .modal-container,
+#videoModal .modal-container {
+    scrollbar-width: thin !important;
+    scrollbar-color: #a3e635 #1a1a1a !important;
+}
+
+.modal-container::-webkit-scrollbar,
+.carousel-container::-webkit-scrollbar,
+.detail-container::-webkit-scrollbar,
+#imageCarouselModal .modal-container::-webkit-scrollbar,
+#videoModal .modal-container::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.modal-container::-webkit-scrollbar-track,
+.carousel-container::-webkit-scrollbar-track,
+.detail-container::-webkit-scrollbar-track,
+#imageCarouselModal .modal-container::-webkit-scrollbar-track,
+#videoModal .modal-container::-webkit-scrollbar-track {
+    background: rgba(42, 42, 42, 0.8) !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(163, 230, 53, 0.2) !important;
+}
+
+.modal-container::-webkit-scrollbar-thumb,
+.carousel-container::-webkit-scrollbar-thumb,
+.detail-container::-webkit-scrollbar-thumb,
+#imageCarouselModal .modal-container::-webkit-scrollbar-thumb,
+#videoModal .modal-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #a3e635, #84cc16) !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(26, 26, 26, 0.5) !important;
+    transition: all 0.3s ease !important;
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover,
+.carousel-container::-webkit-scrollbar-thumb:hover,
+.detail-container::-webkit-scrollbar-thumb:hover,
+#imageCarouselModal .modal-container::-webkit-scrollbar-thumb:hover,
+#videoModal .modal-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #84cc16, #65a30d) !important;
+    box-shadow: 0 0 8px rgba(163, 230, 53, 0.6) !important;
+    transform: scale(1.1) !important;
+}
+
+/* ✅ SCROLLBAR PARA BODY PRINCIPAL */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #a3e635, #84cc16);
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #84cc16, #65a30d);
+    box-shadow: 0 0 8px rgba(163, 230, 53, 0.4);
+}
+
+/* ✅ RESPONSIVE PARA SCROLLBAR */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    .modal-container::-webkit-scrollbar,
+    .carousel-container::-webkit-scrollbar,
+    .detail-container::-webkit-scrollbar,
+    #imageCarouselModal .modal-container::-webkit-scrollbar,
+    #videoModal .modal-container::-webkit-scrollbar {
+        width: 6px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    .modal-container::-webkit-scrollbar,
+    .carousel-container::-webkit-scrollbar,
+    .detail-container::-webkit-scrollbar,
+    #imageCarouselModal .modal-container::-webkit-scrollbar,
+    #videoModal .modal-container::-webkit-scrollbar {
+        width: 4px !important;
+    }
 }
