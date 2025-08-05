@@ -1227,4 +1227,3 @@ function createObliquoConfetti() {
 }
 
 setTimeout(createObliquoConfetti, 1000)
-  

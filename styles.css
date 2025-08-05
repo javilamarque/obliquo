@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
   min-height: 100vh;
   color: white;
   overflow-x: auto;
@@ -27,12 +28,17 @@ body {
 .header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #a3e635, #84cc16);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(163, 230, 53, 0.3);
 }
 
 .header p {
   font-size: 1.1rem;
   opacity: 0.9;
+  color: #e0e0e0;
 }
 
 .controls {
@@ -53,23 +59,32 @@ body {
   align-items: center;
   gap: 8px;
   font-weight: 600;
+  font-family: "Nunito", sans-serif;
 }
 
 .btn-primary {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #a3e635, #84cc16);
+  color: #333;
+  border: 2px solid #a3e635;
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(163, 230, 53, 0.1);
+  color: #a3e635;
+  border: 2px solid #a3e635;
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(163, 230, 53, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #84cc16, #65a30d);
+}
+
+.btn-secondary:hover {
+  background: rgba(163, 230, 53, 0.2);
 }
 
 .icon {
@@ -98,13 +113,15 @@ body {
 .puzzle-section h3 {
   margin-bottom: 15px;
   font-size: 1.3rem;
+  color: #a3e635;
+  font-weight: 700;
 }
 
 .reference-image {
-  border: 3px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid #a3e635;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .reference-image img {
@@ -114,51 +131,54 @@ body {
   display: block;
 }
 
+/* ✅ GRID DEL ROMPECABEZAS - SIN GAPS PARA QUE LAS PIEZAS SE VEAN UNIDAS */
 .puzzle-grid {
   display: grid;
   grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(2, 150px);
-  gap: 2px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 15px;
+  grid-template-rows: repeat(2, 100px);
+  gap: 1px;
+  /* Gap mínimo para poder distinguir las piezas */
+  background: #333;
+  padding: 10px;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  width: 484px;
-  height: 334px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border: 3px solid #a3e635;
+  width: 470px;
+  /* Ajustado para el nuevo tamaño */
+  height: 230px;
+  /* Ajustado para el nuevo tamaño */
 }
 
+/* ✅ PIEZAS DEL ROMPECABEZAS - MOSTRAR LA IMAGEN, NO NÚMEROS */
 .puzzle-piece {
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 150px;
+  height: 100px;
+  border: 1px solid #a3e635;
+  border-radius: 2px;
   cursor: move;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  /* La imagen de fondo se aplica via JavaScript */
 }
 
 .puzzle-piece:hover {
-  border-color: rgba(255, 255, 255, 0.8);
+  border-color: #84cc16;
   transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(163, 230, 53, 0.4);
+  z-index: 10;
 }
 
 .puzzle-piece.dragging {
-  opacity: 0.5;
-  transform: rotate(5deg);
+  opacity: 0.7;
+  transform: rotate(3deg) scale(1.05);
+  z-index: 100;
 }
 
 .puzzle-piece.drag-over {
   border-color: #4ade80;
-  background: rgba(74, 222, 128, 0.2);
-}
-
-.piece-image {
-  width: 100%;
-  height: 100%;
-  background-image: url("obliquo.jpg");
-  background-size: 450px 300px;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: rgba(74, 222, 128, 0.1);
+  transform: scale(0.95);
 }
 
 .progress-section {
@@ -169,23 +189,26 @@ body {
 .progress-text {
   margin-bottom: 10px;
   font-size: 1.1rem;
+  color: #e0e0e0;
+  font-weight: 600;
 }
 
 .progress-bar {
   width: 100%;
   max-width: 400px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  height: 12px;
+  background: rgba(163, 230, 53, 0.2);
+  border-radius: 6px;
   margin: 0 auto;
   overflow: hidden;
+  border: 1px solid #a3e635;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #4ade80, #3b82f6);
-  border-radius: 4px;
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #a3e635, #84cc16);
+  border-radius: 6px;
+  transition: width 0.5s ease;
   width: 0%;
 }
 
@@ -195,11 +218,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 .modal.hidden {
@@ -207,84 +231,172 @@ body {
 }
 
 .modal-content {
-  background: white;
-  color: #333;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  color: white;
   padding: 40px;
   border-radius: 16px;
   text-align: center;
   max-width: 400px;
   margin: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  border: 2px solid #a3e635;
 }
 
 .celebration-icon {
   font-size: 4rem;
   margin-bottom: 20px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 .modal-content h2 {
-  color: #16a34a;
+  color: #a3e635;
   margin-bottom: 15px;
   font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .modal-content p {
   margin-bottom: 10px;
   line-height: 1.6;
+  color: #e0e0e0;
 }
 
 .redirect-text {
   font-size: 0.9rem;
-  color: #666;
+  color: #a3e635;
   font-style: italic;
+  font-weight: 600;
+  animation: pulse 1.5s infinite;
 }
 
-/* Video Modal Styles */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ✅ VIDEO MODAL CON CONTROLES MEJORADOS */
 .video-modal {
   position: fixed;
   top: 0;
   left: 0;
-  width: 99vw;
-  height: 99vh;
-  background: #000;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2000;
-  padding: 2.5vh 2.5vw;
-  /* 1.5% de padding en todos los lados para crear el 3% total */
+  backdrop-filter: blur(5px);
 }
 
 .video-modal.hidden {
   display: none;
 }
 
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid #a3e635;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* ✅ CONTROLES DEL VIDEO */
+.video-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.skip-btn,
+.mute-btn {
+  background: linear-gradient(135deg, #a3e635, #84cc16);
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.skip-btn:hover,
+.mute-btn:hover {
+  background: linear-gradient(135deg, #84cc16, #65a30d);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(163, 230, 53, 0.4);
+}
+
+.mute-btn {
+  padding: 10px 15px;
+  min-width: 50px;
+  justify-content: center;
+}
+
+/* ✅ VIDEO CON CONTROLES NATIVOS */
 .completion-video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-  /* Opcional: esquinas redondeadas */
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-  /* Opcional: sombra sutil */
+  height: auto;
+  max-height: 70vh;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: #000;
 }
 
-/* Asegurar que el video no muestre controles */
-.completion-video::-webkit-media-controls {
-  display: none !important;
+/* ✅ INFORMACIÓN DEL VIDEO */
+.video-info {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
 }
 
-.completion-video::-webkit-media-controls-panel {
-  display: none !important;
+.video-info p {
+  color: #e0e0e0;
+  margin: 5px 0;
+  font-size: 0.9rem;
 }
 
-.completion-video::-webkit-media-controls-play-button {
-  display: none !important;
-}
-
-.completion-video::-webkit-media-controls-start-playback-button {
-  display: none !important;
+.video-hint {
+  color: #a3e635;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-style: italic;
 }
 
 /* Responsive Design */
@@ -317,9 +429,14 @@ body {
 
   .puzzle-grid {
     grid-template-columns: repeat(3, 120px);
-    grid-template-rows: repeat(2, 120px);
-    width: 384px;
-    height: 264px;
+    grid-template-rows: repeat(2, 80px);
+    width: 372px;
+    height: 170px;
+  }
+
+  .puzzle-piece {
+    width: 120px;
+    height: 80px;
   }
 
   .reference-image img {
@@ -327,24 +444,41 @@ body {
     height: 160px;
   }
 
-  .piece-image {
-    background-size: 360px 240px;
-  }
-
   .controls {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* ✅ VIDEO RESPONSIVE */
+  .video-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .video-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skip-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .puzzle-grid {
     grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(2, 100px);
+    grid-template-rows: repeat(2, 67px);
     gap: 1px;
-    padding: 10px;
-    width: 322px;
-    height: 222px;
+    padding: 8px;
+    width: 316px;
+    height: 150px;
+  }
+
+  .puzzle-piece {
+    width: 100px;
+    height: 67px;
   }
 
   .reference-image img {
@@ -352,11 +486,79 @@ body {
     height: 133px;
   }
 
-  .piece-image {
-    background-size: 300px 200px;
+  .video-container {
+    padding: 10px;
+  }
+
+  .skip-btn,
+  .mute-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
   }
 }
 
+/* Animaciones de entrada */
+.container {
+  animation: fadeIn 1s ease-out;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.puzzle-piece {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ✅ ANIMACIÓN PARA EL VIDEO MODAL */
+.video-modal {
+  animation: fadeInVideo 0.5s ease-out;
+}
+
+@keyframes fadeInVideo {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+
+  to {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+  }
+}
+
+.video-container {
+  animation: slideInVideo 0.5s ease-out;
+}
+
+@keyframes slideInVideo {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
