@@ -11,35 +11,35 @@ const categoryData = {
         images: [
             {
                 src: "./public/diseñoGrafico/1-a.jpg",
-                title: "Identidad Visual Corporativa",
+                title: "Shawn Mendes Tour",
                 description:
                     "Trabajo de poster creativo publicitando un tour del cantante Shawn Mendes. Realizado en Adobe Illustrator.",
                 gallery: ["./public/diseñoGrafico/1-a.jpg", "./public/diseñoGrafico/1-b.jpg"],
             },
             {
                 src: "./public/diseñoGrafico/2-a.jpg",
-                title: "Diseño Editorial Moderno",
+                title: "It Poster",
                 description:
                     "Trabajo de poster cinematográfico sobre la película IT de 2017, haciendo alusión a la frase de Todos flotan… y cuando este aquí abajo, tú también flotaras del personaje Pennywise Realizado en Adobe Photoshop",
                 gallery: ["./public/diseñoGrafico/2-a.jpg", "./public/diseñoGrafico/2-b.jpg"],
             },
             {
                 src: "./public/diseñoGrafico/3-a.jpg",
-                title: "Packaging Innovador",
+                title: "Stephen King Book Portada",
                 description:
                     "Trabajo de portada para libro biográfico de Stephen King, donde lo vemos acompañado de algunos de sus personajes más populares. Realizado en Adobe Illustrator.",
                 gallery: ["./public/diseñoGrafico/3-a.jpg", "./public/diseñoGrafico/3-b.jpg"],
             },
             {
                 src: "./public/diseñoGrafico/4-a.jpg",
-                title: "Branding Estratégico",
+                title: "'Evolucion' Estampa",
                 description:
                     "Trabajo de montaje sobre lo antiguo contrastando con la modernidad como diseño de estampa de remera. Realizado en Adobe Photoshop.",
                 gallery: ["./public/diseñoGrafico/4-a.jpg", "./public/diseñoGrafico/4-b.jpg"],
             },
             {
                 src: "./public/diseñoGrafico/5.jpg",
-                title: "Diseño de Logotipos",
+                title: "'Incognita' Branding",
                 description:
                     "Trabajo de branding de una editorial de libros dedicada a publicar a nuevos escritores y sacar nuevas ediciones de clásicos del género del terror, misterio y crimen. Realizado en Adobe Illustrator.",
                 gallery: [
@@ -54,38 +54,43 @@ const categoryData = {
         ],
     },
     "Motion Graphics": {
-        hasVideo: false,
+        hasVideo: true,
         images: [
             {
                 src: "./public/motion/1.jpg",
-                title: "Animación 2D Creativa",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.",
+                title: "Adidas Running",
+                video: "/public/motion/1.mp4",
+                description: "Proyecto inspirado en la marca Adidas. Incentiva a que las personas se animen a correr independientemente de ser atletas o ganar un premio, ya que la importancia esta en hacerlo sin pensar la forma o condición de cada uno. Realizado con tratamiento fotográfico de collage y recortes, editado en After Effects.",
                 gallery: ["./public/motion/1.jpg"],
             },
             {
                 src: "./public/motion/2.jpg",
-                title: "Efectos Visuales Dinámicos",
-                description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+                title: "Kiddo Hamburguesas",
+                video: "/public/motion/2.mp4",
+                description: "Trabajo creativo orientado a publicidad para Hamburguesas Kiddo. Centrado en mostrar las hamburguesas populares de la marca y su sabor. Realizado con ilustración vectorial y animado en After Effects.",
                 gallery: ["./public/motion/2.jpg"],
             },
             {
                 src: "./public/motion/3.jpg",
-                title: "Transiciones Cinematográficas",
-                description: "Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.",
+                title: "Complot AW24",
+                video: "/public/motion/3.mp4",
+                description: "Proyecto inspirado en la marca Complot. El mismo busca lucir la temporada 2024 y su versatilidad con la identidad de Complot. Realizado con recortes de ropa de la marca, con técnica de motion graphics en After Effects.",
                 gallery: ["./public/motion/3.jpg"],
             },
             {
                 src: "./public/motion/4.jpg",
-                title: "Animación de Personajes",
+                title: "Espresso & Alfred",
+                video: "/public/motion/4.mp4",
                 description:
                     "Trabajo creativo orientado a publicidad de un sabor de café limitado de Sabrina Carpenter en colaboración con la marca Alfred. Centrado en la letra del éxito musical 'Espresso' se muestra el atractivo del café y la colaboración de la cantante con la marca. Realizado con ilustración vectorial y animado en After Effects.",
                 gallery: ["./public/motion/4.jpg"],
             },
             {
                 src: "./public/motion/5.jpg",
-                title: "Motion Graphics Corporativo",
+                title: "Spotify Publicidad",
+                video: "/public/motion/5.mp4",
                 description:
-                    " Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus.",
+                    "Proyecto inspirado en Spotify para fomentar descargas de la app. Se hace un vistazo a la versatilidad de contenido para conectar con el publico e incentivarlos a sumarse a la plataforma. Realizado con técnica de motion graphics en After Effects.",
                 gallery: ["./public/motion/5.jpg", "./public/motion/5-b.jpg"],
             },
         ],
@@ -95,7 +100,7 @@ const categoryData = {
         images: [
             {
                 src: "./public/carrousel-campanias/1.jpg",
-                title: "Campaña Publicitaria Integral",
+                title: "'Campaña' Fresca",
                 video: "/public/carrousel-campanias/Videocaso_FRESCA.mp4",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt mauris eu risus.",
                 gallery: ["./public/carrousel-campanias/1.jpg"],
@@ -107,13 +112,13 @@ const categoryData = {
         images: [
             {
                 src: "./public/marchan/1.jpg",
-                title: "Productos Promocionales",
+                title: "'Saturn Returns' Coleccion",
                 description: "Diseño de merch inspirado en el álbum “eternal sunshine” de Ariana Grande lanzado en 2024. ¿Las canciones “Yes, and?” y “Saturn Returns Interlude” son parte de las piezas centrales. Realizado en Adobe Photoshop.",
                 gallery: ["./public/marchan/1.jpg"],
             },
             {
                 src: "./public/marchan/2.jpg",
-                title: "Merchandising Corporativo",
+                title: "'Un Verano Sin Ti' Remera",
                 description: "Diseño limitado de remera sobre álbum “Un año sin ti” de Bad Bunny lanzado en 2022. Realizado en Adobe Illustrator.",
                 gallery: ["./public/marchan/2.jpg"],
             },
@@ -124,21 +129,21 @@ const categoryData = {
         images: [
             {
                 src: "./public/diseñoWeb/1.jpg",
-                title: "Sitio Web Responsivo",
+                title: "Web Glutenzero",
                 description:
                     "Página web informativa de la organización Glutenzero, dedicada a difundir información sobre la celiaquía. Dentro de la web se pueden encontrar recetas, cuidado y mitos que se difunden sobre la celiaquía. Ver sitio: https://glutenzero.obliquo.site/",
                 gallery: ["./public/diseñoWeb/1.jpg"],
             },
             {
                 src: "./public/diseñoWeb/2.jpg",
-                title: "Landing Page Optimizada",
+                title: "Landing Page Gea",
                 description:
                     "Landing page sobre la aplicación Gea, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. Ver sitio: https://obliquo.site/",
                 gallery: ["./public/diseñoWeb/2.jpg"],
             },
             {
                 src: "./public/diseñoWeb/3.jpg",
-                title: "E-commerce Moderno",
+                title: "E-commerce Pet Pats",
                 description:
                     "E-commerce de la tienda de mascotas Pet Pats, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. Ver sitio: https://petpats.obliquo.site/",
                 gallery: ["./public/diseñoWeb/3.jpg"],
@@ -150,35 +155,35 @@ const categoryData = {
         images: [
             {
                 src: "./public/3d/1.jpg",
-                title: "Modelado Arquitectónico",
+                title: "Chopper - Personaje 3D",
                 video: "public/3d/video/OBLIQUO_reel.mp4", // ✅ VIDEO
                 description:
                     'Modelo 3d inspirado en Chopper, el personaje de la serie de manga y franquicia "One Piece", acompañado de elementos alusivos a la misma. Realizado en Zbrush y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/6NJQZ6',
             },
             {
                 src: "./public/3d/2.jpg",
-                title: "Renderizado Fotorrealista",
+                title: "Arma Cyberpunk - Modelado 3D",
                 video: "public/3d/video/2.mp4", // ✅ VIDEO
                 description:
                     "Modelo 3d construido a partir del estilo de armas cyberpunk. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/yDzaN9",
             },
             {
                 src: "./public/3d/3.jpg",
-                title: "Animación 3D Avanzada",
+                title: "Gatalloween - Personaje 3D",
                 video: "public/3d/video/3.mp4", // ✅ VIDEO
                 description:
                     "Modelo 3d de gatito inspirado en Halloween ubicado en un cementerio para acompañar la estética del personaje. Realizado en Zbrush y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/XJ0Jol",
             },
             {
                 src: "./public/3d/4.jpg",
-                title: "Visualización de Productos",
+                title: "Reloj Cucu - Modelo 3D",
                 video: "public/3d/video/4.mp4", // ✅ VIDEO
                 description:
                     "Modelo 3d de reloj cucú con detalles y terminaciones de engranajes al estilo steampunk. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/39OKZg",
             },
             {
                 src: "./public/3d/5.jpg",
-                title: "Escenarios Virtuales",
+                title: "Radio Radar - Modelo 3D",
                 video: "public/3d/video/5.mp4", // ✅ VIDEO
                 description:
                     "Modelo 3d de radio radar retro con elementos agregados de tecnología de localización y pantallas. Realizado en 3ds max y texturizado en Substance Painter. ArtStation: https://www.artstation.com/artwork/RyvA5r",
