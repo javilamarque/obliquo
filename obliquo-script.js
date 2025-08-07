@@ -102,19 +102,19 @@ const categoryData = {
             },
         ],
     },
-    Merchandising: {
+    "Merchandising": {
         hasVideo: false,
         images: [
             {
                 src: "./public/marchan/1.jpg",
                 title: "Productos Promocionales",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat accumsan nulla.",
+                description: "Diseño de merch inspirado en el álbum “eternal sunshine” de Ariana Grande lanzado en 2024. ¿Las canciones “Yes, and?” y “Saturn Returns Interlude” son parte de las piezas centrales. Realizado en Adobe Photoshop.",
                 gallery: ["./public/marchan/1.jpg"],
             },
             {
                 src: "./public/marchan/2.jpg",
                 title: "Merchandising Corporativo",
-                description: "Pellentesque dapibus hendrerit tortor. Praesent egestas tristique nibh.",
+                description: "Diseño limitado de remera sobre álbum “Un año sin ti” de Bad Bunny lanzado en 2022. Realizado en Adobe Illustrator.",
                 gallery: ["./public/marchan/2.jpg"],
             },
         ],
@@ -131,16 +131,16 @@ const categoryData = {
             },
             {
                 src: "./public/diseñoWeb/2.jpg",
-                title: "E-commerce Moderno",
+                title: "Landing Page Optimizada",
                 description:
-                    "E-commerce de la tienda de mascotas Pet Pats, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. Ver sitio: https://petpats.obliquo.site/",
+                    "Landing page sobre la aplicación Gea, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. Ver sitio: https://obliquo.site/",
                 gallery: ["./public/diseñoWeb/2.jpg"],
             },
             {
                 src: "./public/diseñoWeb/3.jpg",
-                title: "Landing Page Optimizada",
+                title: "E-commerce Moderno",
                 description:
-                    "Landing page sobre la aplicación Gea, una app dedicada al cuidado de plantas. Dentro de la web se nos muestran sus funciones, reseñas e interfaz. Ver sitio: https://obliquo.site/",
+                    "E-commerce de la tienda de mascotas Pet Pats, dentro de la misma encontramos productos para perros, gatos, peces y roedores, así como variedad de marcas para elegir. Ver sitio: https://petpats.obliquo.site/",
                 gallery: ["./public/diseñoWeb/3.jpg"],
             },
         ],
