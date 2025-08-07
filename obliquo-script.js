@@ -91,11 +91,12 @@ const categoryData = {
         ],
     },
     "Diseño Publicitario": {
-        hasVideo: false,
+        hasVideo: true,
         images: [
             {
                 src: "./public/carrousel-campanias/1.jpg",
                 title: "Campaña Publicitaria Integral",
+                video: "/public/carrousel-campanias/Videocaso_FRESCA.mp4",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt mauris eu risus.",
                 gallery: ["./public/carrousel-campanias/1.jpg"],
             },
