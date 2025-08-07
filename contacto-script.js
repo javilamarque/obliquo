@@ -1,12 +1,11 @@
 // ✅ JAVASCRIPT PARA EFECTOS VISUALES Y FORMSPREE
-
 document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ Página cargada - Formspree configurado")
-
   setupFormspreeForm()
   setupNavigation()
   createBackgroundParticles()
   setupFormEffects()
+  setupSocialIcons() // ✅ NUEVO: Configurar iconos sociales
 })
 
 // ✅ CONFIGURAR FORMULARIO FORMSPREE
@@ -68,7 +67,6 @@ function setupFormEffects() {
     input.addEventListener("focus", () => {
       input.style.transform = "scale(1.02)"
       input.style.boxShadow = "0 0 0 3px rgba(163, 230, 53, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2)"
-
       // Efecto de onda
       createRippleEffect(input, index)
     })
@@ -258,34 +256,57 @@ function createParticle(color, index = 0) {
   }, 25000)
 }
 
-// ✅ EFECTO INSTAGRAM MEJORADO
-document.addEventListener("DOMContentLoaded", () => {
+// ✅ CONFIGURAR ICONOS SOCIALES - INSTAGRAM Y ARTSTATION
+function setupSocialIcons() {
   const instagramIcon = document.querySelector(".instagram-link")
+  const artstationIcon = document.querySelector(".artstation-link")
 
+  // ✅ EFECTOS INSTAGRAM
   if (instagramIcon) {
     instagramIcon.addEventListener("mouseenter", () => {
       instagramIcon.style.transform = "translateY(-10px) rotate(15deg) scale(1.2)"
-
+      instagramIcon.style.color = "#a3e635"
       // Crear partículas alrededor del icono
       for (let i = 0; i < 5; i++) {
         setTimeout(() => {
-          createInstagramParticle(instagramIcon)
+          createSocialParticle(instagramIcon, "#a3e635")
         }, i * 100)
       }
     })
 
     instagramIcon.addEventListener("mouseleave", () => {
       instagramIcon.style.transform = "translateY(0) rotate(0deg) scale(1)"
+      instagramIcon.style.color = "#a3e635"
     })
   }
-})
 
-function createInstagramParticle(element) {
+  // ✅ EFECTOS ARTSTATION
+  if (artstationIcon) {
+    artstationIcon.addEventListener("mouseenter", () => {
+      artstationIcon.style.transform = "translateY(-10px) rotate(-15deg) scale(1.2)"
+      artstationIcon.style.filter = "brightness(1.3) drop-shadow(0 0 10px #fbbf24)"
+      // Crear partículas alrededor del icono
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+          createSocialParticle(artstationIcon, "#fbbf24")
+        }, i * 100)
+      }
+    })
+
+    artstationIcon.addEventListener("mouseleave", () => {
+      artstationIcon.style.transform = "translateY(0) rotate(0deg) scale(1)"
+      artstationIcon.style.filter = "brightness(1) drop-shadow(0 0 5px rgba(163, 230, 53, 0.3))"
+    })
+  }
+}
+
+// ✅ CREAR PARTÍCULAS PARA ICONOS SOCIALES
+function createSocialParticle(element, color) {
   const particle = document.createElement("div")
   particle.style.position = "fixed"
   particle.style.width = "6px"
   particle.style.height = "6px"
-  particle.style.backgroundColor = "#a3e635"
+  particle.style.backgroundColor = color
   particle.style.borderRadius = "50%"
   particle.style.pointerEvents = "none"
   particle.style.zIndex = "1001"
@@ -314,4 +335,5 @@ function createInstagramParticle(element) {
     }
   }, 1000)
 }
+
 

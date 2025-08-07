@@ -100,9 +100,9 @@ const categoryData = {
         images: [
             {
                 src: "./public/carrousel-campanias/1.jpg",
-                title: "'Campaña' Fresca",
+                title: 'Campaña "Fresca"',
                 video: "/public/carrousel-campanias/Videocaso_FRESCA.mp4",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt mauris eu risus.",
+                description: "Proyecto de campaña publicitaria para la marca de pastas Fresca. En la misma se buscaba promover la idea de lo “auténtico italiano“ y su importancia para la marca. En este caso se apuntó a realizar una campaña con tono humorístico y simpático para generar disrupción, acompañado de una activación al final para promover el concepto con el público.",
                 gallery: ["./public/carrousel-campanias/1.jpg"],
             },
         ],
