@@ -101,7 +101,7 @@ body {
 
 /* PRIMERA SECCIÓN - EQUIPO (4 TARJETAS EN FILA HORIZONTAL) */
 .team-main-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #000000 0%, #401E74 100%);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -150,21 +150,20 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Card Backgrounds específicos */
-.team-card.card-pink {
-    background: linear-gradient(135deg, #ff6b9d, #c44569, #8e44ad);
-}
+/* Card Backgrounds */
+.card-pink {
+    background: linear-gradient(135deg, #CF2585, #C8141E, #CF2585); }
 
 .team-card.card-purple {
-    background: linear-gradient(135deg, #667eea, #764ba2, #8e44ad);
+    background: linear-gradient(135deg, #1DBADF, #401E74, #1DBADF);
 }
 
 .team-card.card-blue {
-    background: linear-gradient(135deg, #4facfe, #00f2fe, #1e3c72);
+    background: linear-gradient(135deg, #000087, #1DBADF, #000087);
 }
 
 .team-card.card-green {
-    background: linear-gradient(135deg, #a8edea, #fed6e3, #00d2ff);
+    background: linear-gradient(135deg, #005C53, #8ED91E, #005C53);
 }
 
 .card-icon {
@@ -261,7 +260,7 @@ body {
     font-size: clamp(3rem, 6vw, 6rem);
     font-weight: 900;
     letter-spacing: 4px;
-    background: linear-gradient(45deg, #ffffff, #a3e635, #ffffff);
+    background: linear-gradient(45deg, #ECF23D);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -477,11 +476,26 @@ body {
     padding-bottom: 15px;
 }
 
+
 .carousel-title {
     font-size: 2rem;
     font-weight: 700;
     color: #a3e635;
-    margin: 0;
+    
+}
+
+.carousel-hint {
+    color: #ccc;
+    /* Color más suave para el hint */
+    font-size: 0.9rem;
+    font-weight: 400;
+    flex-grow: 1;
+    /* Permite que ocupe el espacio restante */
+    text-align: right;
+    /* Alinea el texto a la derecha dentro de su espacio */
+    margin-left: 20px;
+    /* Añade un margen a la izquierda para separarlo del título */
+    color: #a3e635;
 }
 
 .close-btn {

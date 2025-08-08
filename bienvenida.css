@@ -111,11 +111,11 @@ body {
 
 /* Card Backgrounds */
 .card-pink {
-  background: linear-gradient(135deg, #ff6b9d, #c44569, #8e44ad);
+  background: linear-gradient(135deg, #CF2585, #401E74, #CF2585);
 }
 
 .card-purple {
-  background: linear-gradient(135deg, #667eea, #764ba2, #8e44ad);
+  background: linear-gradient(135deg, #1DBADF, #401E74, #1DBADF);
 }
 
 .card-blue {
@@ -123,7 +123,7 @@ body {
 }
 
 .card-green {
-  background: linear-gradient(135deg, #a8edea, #fed6e3, #00d2ff);
+  background: linear-gradient(135deg, #025710, #ff0655, #00d2ff);
 }
 
 /* Card Icons */

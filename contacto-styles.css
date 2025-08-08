@@ -19,7 +19,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  background: linear-gradient(135deg, var(--dark-bg) 0%, #2d1b69 50%, var(--secondary-purple) 100%);
+  background: linear-gradient(135deg, #000000, #401E74);
   color: var(--text-light);
   min-height: 100vh;
   overflow-x: hidden;
@@ -110,12 +110,12 @@ body {
 .main-title {
   font-size: 4rem;
   font-weight: 900;
-  background: linear-gradient(45deg, var(--primary-green), var(--accent-yellow));
+  background: linear-gradient(135deg, #8ED91E, #ECF23D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 20px;
-  text-shadow: 0 0 30px rgba(163, 230, 53, 0.3);
+  
 }
 
 .description {
@@ -140,7 +140,7 @@ body {
 .cta {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--accent-yellow);
+  color: #ecf23d;
   font-style: italic;
 }
 
